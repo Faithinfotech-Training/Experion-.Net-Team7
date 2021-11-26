@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -7,10 +8,14 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
+using TrainingAcademyManagmentSystem.Repository;
 using TrainingAcademyManagmentSystem.Models;
 using TrainingAcademyManagmentSystem.Repository;
 
@@ -29,7 +34,63 @@ namespace TrainingAcademyManagmentSystem
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddDbContext<TrainingManagmentSystemContext>(
+                          item => item.UseSqlServer(Configuration.GetConnectionString("ConStr"))
+                          );
 
+            services.AddScoped<IUserRepo, UserRepo>();
+            //jwt
+
+            //register a JWT authentication schema
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+
+
+
+
+
+
+
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = Configuration["Jwt:Issuer"],
+            ValidAudience = Configuration["Jwt:Issuer"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]))
+        };
+    }
+    );
+
+
+
+            services.AddMvc();
+
+
+
+            services.AddControllers().AddNewtonsoftJson(
+
+                options =>
+                {
+                    options.SerializerSettings.ContractResolver = new DefaultContractResolver();
+
+                    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+
+                }
+                );
+
+            services.AddCors();
+
+
+          
+
+
+            services.AddScoped<ICourseRepo, CourseRepo>();
+           
+            //connecting to db 
             services.AddDbContext<TrainingManagmentSystemContext>(
             options =>
             options.UseSqlServer(Configuration.GetConnectionString("Connection"))
@@ -39,9 +100,15 @@ namespace TrainingAcademyManagmentSystem
 
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+            // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
+            app.UseCors(options =>
+           options.WithOrigins("http://localhost:4200")
+           .AllowAnyMethod().AllowAnyHeader().AllowCredentials());
+
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
