@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TrainingAcademyManagmentSystem.Models;
+using TrainingAcademyManagmentSystem.Repository;
 
 namespace TrainingAcademyManagmentSystem
 {
@@ -33,6 +34,9 @@ namespace TrainingAcademyManagmentSystem
             options =>
             options.UseSqlServer(Configuration.GetConnectionString("Connection"))
             );
+
+            services.AddScoped<IResourceEnquiry, Repository.ResourceEnquiryRepo>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
