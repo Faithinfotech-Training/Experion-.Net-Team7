@@ -6499,19 +6499,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\junaid.kv\\.nuget\\packages\\": {}
+    "C:\\Users\\sarith.sajeev\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\EXPERIONFINALPROJECT\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem.csproj",
+      "projectUniqueName": "D:\\Project CRM\\Rest API\\Experion-.Net-Team7\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem.csproj",
       "projectName": "TrainingAcademyManagmentSystem",
-      "projectPath": "E:\\EXPERIONFINALPROJECT\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem.csproj",
-      "packagesPath": "C:\\Users\\junaid.kv\\.nuget\\packages\\",
-      "outputPath": "E:\\EXPERIONFINALPROJECT\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem\\obj\\",
+      "projectPath": "D:\\Project CRM\\Rest API\\Experion-.Net-Team7\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem.csproj",
+      "packagesPath": "C:\\Users\\sarith.sajeev\\.nuget\\packages\\",
+      "outputPath": "D:\\Project CRM\\Rest API\\Experion-.Net-Team7\\TrainingAcademyManagmentSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\junaid.kv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sarith.sajeev\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
