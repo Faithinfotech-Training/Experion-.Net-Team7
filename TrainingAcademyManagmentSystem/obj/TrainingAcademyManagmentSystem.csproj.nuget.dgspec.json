@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem.csproj": {}
+    "E:\\Final Project\\Backend\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem.csproj": {}
   },
   "projects": {
-    "E:\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem.csproj": {
+    "E:\\Final Project\\Backend\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem.csproj",
+        "projectUniqueName": "E:\\Final Project\\Backend\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem.csproj",
         "projectName": "TrainingAcademyManagmentSystem",
-        "projectPath": "E:\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem.csproj",
-        "packagesPath": "C:\\Users\\junaid.kv\\.nuget\\packages\\",
-        "outputPath": "E:\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem\\obj\\",
+        "projectPath": "E:\\Final Project\\Backend\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem.csproj",
+        "packagesPath": "C:\\Users\\subin.younas\\.nuget\\packages\\",
+        "outputPath": "E:\\Final Project\\Backend\\TrainingAcademyManagmentSystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\junaid.kv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\subin.younas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
