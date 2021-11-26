@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Project CRM\\Rest API\\Experion-.Net-Team7\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem.csproj": {}
+    "E:\\EXPERIONFINALPROJECT\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem.csproj": {}
   },
   "projects": {
-    "D:\\Project CRM\\Rest API\\Experion-.Net-Team7\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem.csproj": {
+    "E:\\EXPERIONFINALPROJECT\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project CRM\\Rest API\\Experion-.Net-Team7\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem.csproj",
+        "projectUniqueName": "E:\\EXPERIONFINALPROJECT\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem.csproj",
         "projectName": "TrainingAcademyManagmentSystem",
-        "projectPath": "D:\\Project CRM\\Rest API\\Experion-.Net-Team7\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem.csproj",
-        "packagesPath": "C:\\Users\\sarith.sajeev\\.nuget\\packages\\",
-        "outputPath": "D:\\Project CRM\\Rest API\\Experion-.Net-Team7\\TrainingAcademyManagmentSystem\\obj\\",
+        "projectPath": "E:\\EXPERIONFINALPROJECT\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem.csproj",
+        "packagesPath": "C:\\Users\\junaid.kv\\.nuget\\packages\\",
+        "outputPath": "E:\\EXPERIONFINALPROJECT\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sarith.sajeev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\junaid.kv\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
