@@ -100,7 +100,6 @@ D:\Project CRM\Rest API\Experion-.Net-Team7\TrainingAcademyManagmentSystem\obj\D
 D:\Project CRM\Rest API\Experion-.Net-Team7\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\staticwebassets\TrainingAcademyManagmentSystem.StaticWebAssets.xml
 D:\Project CRM\Rest API\Experion-.Net-Team7\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\scopedcss\bundle\TrainingAcademyManagmentSystem.styles.css
 D:\Project CRM\Rest API\Experion-.Net-Team7\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.RazorTargetAssemblyInfo.cache
-D:\Project CRM\Rest API\Experion-.Net-Team7\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.csproj.CopyComplete
 D:\Project CRM\Rest API\Experion-.Net-Team7\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.dll
 D:\Project CRM\Rest API\Experion-.Net-Team7\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.pdb
 D:\Project CRM\Rest API\Experion-.Net-Team7\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.genruntimeconfig.cache
