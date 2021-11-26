@@ -6504,11 +6504,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem.csproj",
+      "projectUniqueName": "E:\\EXPERIONFINALPROJECT\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem.csproj",
       "projectName": "TrainingAcademyManagmentSystem",
-      "projectPath": "E:\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem.csproj",
+      "projectPath": "E:\\EXPERIONFINALPROJECT\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem.csproj",
       "packagesPath": "C:\\Users\\junaid.kv\\.nuget\\packages\\",
-      "outputPath": "E:\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem\\obj\\",
+      "outputPath": "E:\\EXPERIONFINALPROJECT\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\junaid.kv\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UFcDtO0CpnJf1LI996OlbGlY/7HIqgEBTe3vI1IAEW6derv4kd/d3hemkzX7+/r5qJgzw88YBIwrb+sacM2sZg==",
+  "dgSpecHash": "DpLFR8xHsoMJvgrJy6heLYyRcbURMOBsu2+oB0Ewrb+E2GKpbUcD5Pcx92MT97bS5XmoQGlipslmL8hT4UGNrA==",
   "success": true,
-  "projectFilePath": "E:\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem.csproj",
+  "projectFilePath": "E:\\EXPERIONFINALPROJECT\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem\\TrainingAcademyManagmentSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\junaid.kv\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.1.1\\microsoft.aspnetcore.authentication.abstractions.2.1.1.nupkg.sha512",
     "C:\\Users\\junaid.kv\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.1.1\\microsoft.aspnetcore.authentication.core.2.1.1.nupkg.sha512",
