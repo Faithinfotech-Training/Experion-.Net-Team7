@@ -22,6 +22,8 @@ import { AuthService } from './shared/auth.service';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { LeadService } from './shared/lead.service';
 import { ResourceenquiryService } from './shared/resourceenquiry.service';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { ResourceenquiryService } from './shared/resourceenquiry.service';
     LeadComponent,
     ResourcesComponent,
     ResourceListComponent,
+    ResourceEnquiryComponent,
     CoursesComponent,
     AddCourcesComponent,
     EditCourcesComponent,
@@ -47,7 +50,8 @@ import { ResourceenquiryService } from './shared/resourceenquiry.service';
     ReactiveFormsModule,
     RouterModule,
     BrowserAnimationsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    Ng2SearchPipeModule
   ],
   providers: [
     ResourceService,
