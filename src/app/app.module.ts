@@ -19,6 +19,9 @@ import { EditCourcesComponent } from './edit-cources/edit-cources.component';
 import { CoursesService } from './shared/courses.service';
 import { LoginComponent } from './login/login.component';
 import { AuthService } from './shared/auth.service';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { LeadService } from './shared/lead.service';
+import { ResourceenquiryService } from './shared/resourceenquiry.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,9 @@ import { AuthService } from './shared/auth.service';
     CoursesComponent,
     AddCourcesComponent,
     EditCourcesComponent,
-    LoginComponent
+    LoginComponent,
+    ResourceEnquiryComponent,
+    ResourceComponent
   ],
   imports: [
     ReactiveFormsModule,
@@ -39,13 +44,18 @@ import { AuthService } from './shared/auth.service';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule,
+    BrowserAnimationsModule,
+    NgxPaginationModule
   ],
   providers: [
     ResourceService,
     CoursesService,
     AuthService,
-    CoursesService
+    CoursesService,
+    LeadService,
+    ResourceenquiryService
   ],
   bootstrap: [AppComponent]
 })
