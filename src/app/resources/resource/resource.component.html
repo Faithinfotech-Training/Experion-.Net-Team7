@@ -1,0 +1,78 @@
+<h5>Add Resources</h5>
+<a  (click)="goBack()" class="btn btn-success" style="float: right;margin-bottom:10px;" >Resource List</a>
+<br>
+<div class="center">
+<form name="resform" #form="ngForm" autocomplete="off" (ngSubmit)="onSubmit(form)">
+    <br>
+    <!--Resource idd-->
+    <input type="hidden" name="ResourceId" [ngModel]="resService.formData.ResourceId" />
+    <!--reource name-->
+    <div class="form-group">
+
+        <label>Resource Name</label>
+        <input name="ResourceName" #ResourceName="ngModel" [ngModel]="resService.formData.ResourceName"
+            class="form-control" placeholder="Enter resource name" minlength="5" maxlength="25" required
+            [ngClass]="{'is-invalid':ResourceName.touched && ResourceName.invalid}" />
+        <div class="validation-error" *ngIf="ResourceName.touched && ResourceName.invalid">
+
+            <div *ngIf="ResourceName.errors.required">
+                Resource Name is required</div>
+        </div>
+    </div>
+    <!--Description-->
+    <div class="form-group">
+
+        <label>Resource Description</label>
+        <input type="text" name="ResourceDescription" #ResourceDescription="ngModel" [ngModel]="resService.formData.ResourceDescription"
+            class="form-control" placeholder="Enter Description" minlength="5" maxlength="25" required
+            [ngClass]="{'is-invalid':ResourceDescription.touched && ResourceDescription.invalid}" />
+        <div class="validation-error" *ngIf="ResourceDescription.touched && ResourceDescription.invalid">
+
+            <div *ngIf="ResourceDescription.errors.required">
+                Description is required</div>
+        </div>
+    </div>
+    <!--=Cost-->
+    <div class="form-group">
+
+        <label>Price</label>
+        <input type="number" name="ResourceCost" id="ResourceCost" #ResourceCost="ngModel"
+            [ngModel]="resService.formData.ResourceCost" class="form-control" required
+            [ngClass]="{'is-invalid':ResourceCost.touched && ResourceCost.invalid}" />
+        <div class="validation-error" *ngIf="ResourceCost.touched && ResourceCost.invalid">
+
+            <div *ngIf="ResourceCost.errors.required">
+                Resource Price is required</div>
+        </div>
+    </div>
+    <!--Availability-->
+    <div class="form-group">
+        <div class="form-check">
+        <label>Availability</label>
+        <input type="checkbox" name="IsAvailable" id="IsAvailable" #IsAvailable="ngModel"
+        [ngModel]="resService.formData.IsAvailable" class="form-check-input"/>
+        </div> 
+        
+    </div>
+    
+    <!--Is Public-->
+    <div class="form-group">
+        <div class="form-check">
+            <label class="form-check-label">Is Public </label>
+            <input type="checkbox" name="IsPublic" id="IsPublic" #IsPublic="ngModel"
+                [(ngModel)]="resService.formData.IsPublic" class="form-check-input">
+        </div>
+    </div>
+
+    <!--submit button-->
+    <br>
+    <div class="form-group">
+        <button type="submit" [disabled]="!(form.valid && form.dirty)"
+            class="btn btn-lg btn-primary form-control">Submit</button>
+    </div>
+
+
+
+
+</form>
+</div>

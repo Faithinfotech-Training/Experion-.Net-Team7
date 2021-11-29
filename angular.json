@@ -24,7 +24,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": []
           },
@@ -119,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "TrainigAcademyManagementSystem"
+    }
+  },
+  "defaultProject": "TrainigAcademyManagementSystem",
+  "cli": {
+    "analytics": "0bdcf19b-7c4f-49b9-bd6b-6581055e60c3"
+  }
 }
