@@ -24,6 +24,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 import { LoginComponent } from './login/login.component';
 import { AuthService } from './shared/auth.service';
+import{LeadComponent}from'./lead/lead.component';
+import{ResourceEnquiryComponent}from'./resource-enquiry/resource-enquiry.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,10 @@ import { AuthService } from './shared/auth.service';
     CoursesComponent,
     AddCourcesComponent,
     EditCourcesComponent,
-    LoginComponent
+    LoginComponent,
+    ResourceEnquiryComponent,
+    LeadComponent
+    
   ],
   imports: [
     FormsModule,
