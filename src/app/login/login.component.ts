@@ -80,7 +80,7 @@ export class LoginComponent implements OnInit {
 
               //based on role redirect out application
 
-               // this.router.navigateByUrl("/admin");
+               this.router.navigateByUrl("/admin");
 
               }
               
@@ -93,7 +93,7 @@ export class LoginComponent implements OnInit {
                 sessionStorage.setItem("username",data.UserName);
                 localStorage.setItem("Access_Role",data.RoleId.toString());
                 //based on role redirect out application
-                //this.router.navigateByUrl("/manager");
+                this.router.navigateByUrl("/manager");
               }
              
               else if(this.jwtResponse.RoleId===2)
@@ -105,7 +105,7 @@ export class LoginComponent implements OnInit {
                 sessionStorage.setItem("username",data.UserName);
                 localStorage.setItem("Access_Role",data.RoleId.toString());
                 //based on role redirect out application
-                //this.router.navigateByUrl("/user");
+                this.router.navigateByUrl("/user");
               }
               else{
 

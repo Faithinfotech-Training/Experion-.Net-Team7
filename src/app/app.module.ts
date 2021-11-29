@@ -26,6 +26,8 @@ import { LoginComponent } from './login/login.component';
 import { AuthService } from './shared/auth.service';
 import{LeadComponent}from'./lead/lead.component';
 import{ResourceEnquiryComponent}from'./resource-enquiry/resource-enquiry.component';
+import { AdminComponent } from './admin/admin.component';
+import { ManagerComponent } from './manager/manager.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import{ResourceEnquiryComponent}from'./resource-enquiry/resource-enquiry.compone
     EditCourcesComponent,
     LoginComponent,
     ResourceEnquiryComponent,
-    LeadComponent
+    LeadComponent,
+    AdminComponent,
+    ManagerComponent
     
   ],
   imports: [

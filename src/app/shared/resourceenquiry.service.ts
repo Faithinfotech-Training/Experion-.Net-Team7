@@ -14,6 +14,6 @@ export class ResourceenquiryService {
 
   //insert Resource Enquiry
   insertResourceEnquiry(resourceEnquiry: Resourceenquiry): Observable<any> {
-    return this.httpclient.post(environment.apiUrl + "/api/ResourceEnquiry", resourceEnquiry);
+    return this.httpclient.post(environment.apiUrl + "api/ResourceEnquiry", resourceEnquiry);
   }
 }

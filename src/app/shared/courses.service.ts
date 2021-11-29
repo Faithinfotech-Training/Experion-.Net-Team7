@@ -17,28 +17,28 @@ export class CoursesService {
 
   //add course
   addCourse(course: Courses): Observable<any>{
-    return this.http.post(environment.apiUrl + "/api/courses",course );
+    return this.http.post(environment.apiUrl + "api/courses",course );
   }
 
   //get courses
   getCourses(){
-    this.http.get(environment.apiUrl+ "/api/courses")
+    this.http.get(environment.apiUrl+ "api/courses")
     .toPromise().then(res=>
       this.courses = res as Courses[]);
   }
 
   //update course
   updateCourse(course: Courses): Observable<any>{
-    return this.http.put(environment.apiUrl + "/api/courses",course );
+    return this.http.put(environment.apiUrl + "api/courses",course );
   }
 
   //delete course
   deleteCourse(id: number){
-    return this.http.delete(environment.apiUrl + "/api/courses/" + id);
+    return this.http.delete(environment.apiUrl + "api/courses/" + id);
   }
 
   //get particular course
   getCourse(id: number): Observable<any>{
-    return this.http.get(environment.apiUrl+"/api/courses/" + id);
+    return this.http.get(environment.apiUrl+"api/courses/" + id);
   }
 }

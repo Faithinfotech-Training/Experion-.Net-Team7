@@ -9,6 +9,7 @@ import { EditCourcesComponent } from './edit-cources/edit-cources.component';
 import { LoginComponent } from './login/login.component';
 import{LeadComponent}from'./lead/lead.component';
 import{ResourceEnquiryComponent}from'./resource-enquiry/resource-enquiry.component';
+import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
   {path: 'resources',  component:ResourcesComponent},
@@ -21,6 +22,8 @@ const routes: Routes = [
   { path:'editcourse/:courseId', component:EditCourcesComponent },
   {path: 'login',component: LoginComponent},
   {path: 'lead',component: LeadComponent},
+  {path: 'admin',component: AdminComponent},
+  {path: 'manager',component: LeadComponent},
   {path: 'resourceenquiry/:ResourceId',component: ResourceEnquiryComponent},
  
 ];

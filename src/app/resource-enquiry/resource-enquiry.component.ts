@@ -5,6 +5,7 @@ import {ResourceenquiryService} from "../shared/resourceenquiry.service"
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import {LeadService} from '../shared/lead.service'
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-resource-enquiry',
@@ -16,7 +17,7 @@ export class ResourceEnquiryComponent implements OnInit {
   lead:Lead=new Lead();
   ResourceId:number;
 
-  constructor(public resourceEnquiryService:ResourceenquiryService,private router:Router,public leadService:LeadService,private route:ActivatedRoute,) { }
+  constructor(public resourceEnquiryService:ResourceenquiryService,private router:Router,public leadService:LeadService,private route:ActivatedRoute,private toxter:ToastrService) { }
 
   ngOnInit(): void {
     //get snapshot
@@ -30,7 +31,7 @@ export class ResourceEnquiryComponent implements OnInit {
     console.log(form.value);
     //insert
     this.insertLead(form);
-    // this.insertResourceEnquiry(form);
+    
   }
 
   //insert lead
@@ -43,8 +44,13 @@ export class ResourceEnquiryComponent implements OnInit {
         console.log(this.resourceEnquiryService.formData.LeadId);
         this.insertResourceEnquiry(form);
 
-        // this.resetForm(form);
-        // this.toastrService.success("Employee Record has been Inserted",'EmpAppv2021');
+       
+       this.toxter.success("Your query is registered successfully",'Success');
+       
+      },
+      (error)=>
+      {
+          this.toxter.error("Something went wrong, Please try again.","Error");
       }
     ); 
   }
@@ -57,8 +63,7 @@ export class ResourceEnquiryComponent implements OnInit {
     this.resourceEnquiryService.insertResourceEnquiry(form.value).subscribe(
       (result)=>{
         console.log(result);
-        // this.resetForm(form);
-        // this.toastrService.success("Employee Record has been Inserted",'EmpAppv2021');
+       
       }
     ); 
   }
