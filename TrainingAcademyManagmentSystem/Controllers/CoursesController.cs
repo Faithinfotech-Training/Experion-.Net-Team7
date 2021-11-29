@@ -95,6 +95,7 @@ namespace TrainingAcademyManagmentSystem.Controllers
             }
             catch (Exception)
             {
+                Console.WriteLine("here");
                 return BadRequest();
             }
         }
