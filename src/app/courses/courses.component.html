@@ -1,0 +1,30 @@
+<div class="container own">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Course id</th>
+            <th scope="col"> Course Name </th>
+            <th scope="col"> Price </th>
+            <th scope="col"> Description </th>
+            <th scope="col"> Public </th>
+            <th scope="col"> Availability </th>
+            <th scope="col"> Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let course of service.courses | filter: filter | paginate: {itemsPerPage: 5, currentPage: page}">
+            <th scope="row"> {{course.CourseId}} </th>
+            <td> {{course.CourseName}}  </td>
+            <td> {{course.CoursePrice}}  </td>
+            <td> {{course.CourseDescription}}  </td>
+            <td> {{course.IsPublic}}  </td>
+            <td> {{course.IsAvailable}}  </td>
+            <td>
+                <button class="btn btn-sm btn-outline-danger" (click)="deleteCourse(course.CourseId)"> X </button>&nbsp;
+                <button class="btn btn-info btn-sm" style="margin-left:10px ;" (click)="updateCourse(course.CourseId)"> Edit</button>
+              </td>
+          </tr>
+        </tbody>
+      </table>
+    
+</div>

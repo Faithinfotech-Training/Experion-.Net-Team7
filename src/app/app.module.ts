@@ -14,17 +14,32 @@ import { ToastrModule } from 'ngx-toastr';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
+import { CoursesComponent } from './courses/courses.component';
+import { AddCourcesComponent } from './add-cources/add-cources.component';
+import { EditCourcesComponent } from './edit-cources/edit-cources.component';
+import { CoursesService } from './shared/courses.service';
+
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
+import { LoginComponent } from './login/login.component';
+import { AuthService } from './shared/auth.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     ResourcesComponent,
     ResourceComponent,
-    ResourceListComponent
-    
+    ResourceListComponent,
+    CoursesComponent,
+    AddCourcesComponent,
+    EditCourcesComponent,
+    LoginComponent
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
@@ -37,7 +52,14 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     ReactiveFormsModule
   ],
   providers: [
-    ResourceService
+    ResourceService,
+    NgxPaginationModule,
+    Ng2SearchPipeModule,
+    HttpClientModule,
+    RouterModule,
+    CoursesService,
+    AuthService,
+    CoursesService
   ],
   bootstrap: [AppComponent]
 })
