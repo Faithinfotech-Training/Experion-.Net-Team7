@@ -17,7 +17,6 @@ using System.Text;
 using System.Threading.Tasks;
 using TrainingAcademyManagmentSystem.Repository;
 using TrainingAcademyManagmentSystem.Models;
-using TrainingAcademyManagmentSystem.Repository;
 
 namespace TrainingAcademyManagmentSystem
 {
@@ -35,7 +34,7 @@ namespace TrainingAcademyManagmentSystem
         {
             services.AddControllers();
             services.AddDbContext<TrainingManagmentSystemContext>(
-                          item => item.UseSqlServer(Configuration.GetConnectionString("ConStr"))
+                          item => item.UseSqlServer(Configuration.GetConnectionString("Connection"))
                           );
 
             services.AddScoped<IUserRepo, UserRepo>();
@@ -98,6 +97,7 @@ namespace TrainingAcademyManagmentSystem
 
             services.AddScoped<IResourceEnquiry, Repository.ResourceEnquiryRepo>();
 
+            services.AddScoped<ILeadRepo, LeadRepo>();
         }
 
             // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

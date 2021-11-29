@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TrainingAcademyManagmentSystem.Models;
+using TrainingAcademyManagmentSystem.ViewModel;
 
 namespace TrainingAcademyManagmentSystem.Repository
 {
@@ -26,6 +27,8 @@ namespace TrainingAcademyManagmentSystem.Repository
 
         //update resource enquiry
         public Task<ResourceEnquiry> UpdateResourceEnquiry(ResourceEnquiry enquiry);
+
+        public  Task<List<ResourceEnquiryModel>> GetResourceEnquiryReport();
 
 
 

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TrainingAcademyManagmentSystem.Models;
+using TrainingAcademyManagmentSystem.ViewModel;
 
 namespace TrainingAcademyManagmentSystem.Repository
 {
@@ -16,6 +17,7 @@ namespace TrainingAcademyManagmentSystem.Repository
             this.db = db;
         }
 
+        //add resource enquiry
         public async Task<int> AddResourceEnquiry(ResourceEnquiry enquiry)
         {
             if (db != null)
@@ -59,6 +61,37 @@ namespace TrainingAcademyManagmentSystem.Repository
             if (enquiry != null)
             {
                 return enquiry;
+            }
+            return null;
+        }
+
+
+        //get resource report of all 
+        public async Task<List<ResourceEnquiryModel>> GetResourceEnquiryReport()
+        {
+            //get details from lead resource and resource enquiry table using linq
+            if(db!=null)
+            {
+                return await (from re in db.ResourceEnquiry
+                              join l in db.Lead on re.LeadId equals l.LeadId
+                              join r in db.Resource on re.ResourceId equals r.ResourceId
+                              select new ResourceEnquiryModel
+                              {
+                                  ResourceEnquiryId=re.ResourceEnquiryId,
+                                  LeadName=l.LeadName,
+                                  LeadContact=l.LeadContact,
+                                  LeadEmail=l.LeadEmail,
+                                  LeadStatus=l.LeadStatus,
+                                  ResourceName=r.ResourceName,
+                                  ResourceCost=r.ResourceCost,
+                                  ResourceDescription=r.ResourceDescription,
+                                  IsAvailable=r.IsAvailable,
+                                  Query=re.Query,
+                                  EnquiryDate=re.EnquiryDate
+
+                              }
+                              
+                              ).ToListAsync();
             }
             return null;
         }
