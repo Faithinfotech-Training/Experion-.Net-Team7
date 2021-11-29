@@ -12,15 +12,21 @@ import { CoursesService } from './shared/courses.service';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { RouterModule } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+import { AuthService } from './shared/auth.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoursesComponent,
     AddCourcesComponent,
-    EditCourcesComponent
+    EditCourcesComponent,
+    LoginComponent
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
@@ -30,7 +36,10 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     RouterModule
   ],
-  providers: [CoursesService],
+  providers: [CoursesService,
+    AuthService,
+    CoursesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
