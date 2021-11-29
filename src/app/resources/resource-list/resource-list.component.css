@@ -1,0 +1,10 @@
+.table-bordered{
+    border-radius: 50px;
+    border-color: black;
+    border-width: 10px;
+}
+
+h5{
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+}
