@@ -86,19 +86,15 @@ namespace TrainingAcademyManagmentSystem
             services.AddCors();
 
 
-          
 
 
+            services.AddScoped<IResourceRepo, ResourceRepo>();
             services.AddScoped<ICourseRepo, CourseRepo>();
            
-            //connecting to db 
-            services.AddDbContext<TrainingManagmentSystemContext>(
-            options =>
-            options.UseSqlServer(Configuration.GetConnectionString("Connection"))
-            );
+        
 
-            //add dependency injection for repos
-            services.AddScoped<IResourceRepo, ResourceRepo>();
+            services.AddScoped<IResourceEnquiry, Repository.ResourceEnquiryRepo>();
+
         }
 
             // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

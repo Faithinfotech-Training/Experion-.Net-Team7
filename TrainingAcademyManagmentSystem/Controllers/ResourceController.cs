@@ -20,10 +20,11 @@ namespace TrainingAcademyManagmentSystem.Controllers
             resourceRepository = _r;
         }
 
+        //add a resource
         #region add resource
         [HttpPost]
         [Route("AddResource")]
-        public async Task<IActionResult> AddResource(Resource resource)
+        public async Task<IActionResult> AddResource([FromBody] Resource resource)
         {
             //check the validation of body
             if (ModelState.IsValid)
@@ -49,15 +50,16 @@ namespace TrainingAcademyManagmentSystem.Controllers
         }
         #endregion
 
+        //delete a resource
         #region delete resource
-        [HttpDelete("{id}")]
+        [HttpDelete]
         [Route("DeleteResource")]
         public async Task<IActionResult> DeleteResource(int id)
         {
             try
             {
                 Resource resource = await resourceRepository.DeleteResource(id);
-                if (resource.IsAvailable==false)
+                if (resource.IsAvailable == false)
                 {
                     return Ok(resource);
                 }
@@ -76,17 +78,18 @@ namespace TrainingAcademyManagmentSystem.Controllers
         }
         #endregion
 
+        //update a resource
         #region update resource
         [HttpPut]
         // [Authorize]
         [Route("UpdateResource")]
-        public async Task<IActionResult> UpdateResource(Resource resource)
+        public async Task<IActionResult> UpdateResource([FromBody] Resource resource)
         {
             //Check the validation of body
             if (ModelState.IsValid)
             {
                 try
-                {
+                {   
                     await resourceRepository.UpdateResource(resource);
                     return Ok(resource);
                 }
@@ -99,6 +102,7 @@ namespace TrainingAcademyManagmentSystem.Controllers
         }
         #endregion
 
+        //get details of resources
         #region get resource details
         [HttpGet]
         [Route("GetResources")]
@@ -121,6 +125,7 @@ namespace TrainingAcademyManagmentSystem.Controllers
         }
         #endregion
 
+        //get a resource by its id
         #region get resource by id
         [HttpGet]
         [Route("GetResourceById")]
