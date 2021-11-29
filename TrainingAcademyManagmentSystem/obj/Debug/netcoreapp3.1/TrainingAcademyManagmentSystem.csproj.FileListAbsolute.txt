@@ -100,58 +100,59 @@ D:\Project CRM\Rest API\Experion-.Net-Team7\TrainingAcademyManagmentSystem\obj\D
 D:\Project CRM\Rest API\Experion-.Net-Team7\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\staticwebassets\TrainingAcademyManagmentSystem.StaticWebAssets.xml
 D:\Project CRM\Rest API\Experion-.Net-Team7\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\scopedcss\bundle\TrainingAcademyManagmentSystem.styles.css
 D:\Project CRM\Rest API\Experion-.Net-Team7\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.RazorTargetAssemblyInfo.cache
+D:\Project CRM\Rest API\Experion-.Net-Team7\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.csproj.CopyComplete
 D:\Project CRM\Rest API\Experion-.Net-Team7\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.dll
 D:\Project CRM\Rest API\Experion-.Net-Team7\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.pdb
 D:\Project CRM\Rest API\Experion-.Net-Team7\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.genruntimeconfig.cache
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\appsettings.Development.json
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\appsettings.json
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.exe
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.deps.json
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.runtimeconfig.json
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.runtimeconfig.dev.json
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.pdb
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.csproj.AssemblyReference.cache
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.GeneratedMSBuildEditorConfig.editorconfig
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.AssemblyInfoInputs.cache
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.AssemblyInfo.cs
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.csproj.CoreCompileInputs.cache
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.MvcApplicationPartsAssemblyInfo.cache
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\staticwebassets\TrainingAcademyManagmentSystem.StaticWebAssets.Manifest.cache
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\staticwebassets\TrainingAcademyManagmentSystem.StaticWebAssets.xml
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\scopedcss\bundle\TrainingAcademyManagmentSystem.styles.css
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.RazorTargetAssemblyInfo.cache
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.dll
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.pdb
-E:\EXPERIONFINALPROJECT\TrainingAcademyManagmentSystem\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.genruntimeconfig.cache
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.csproj.AssemblyReference.cache
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.GeneratedMSBuildEditorConfig.editorconfig
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.AssemblyInfoInputs.cache
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.AssemblyInfo.cs
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.csproj.CoreCompileInputs.cache
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.MvcApplicationPartsAssemblyInfo.cache
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.pdb
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\appsettings.Development.json
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\appsettings.json
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.exe
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.deps.json
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.runtimeconfig.json
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.runtimeconfig.dev.json
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.pdb
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\staticwebassets\TrainingAcademyManagmentSystem.StaticWebAssets.Manifest.cache
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\staticwebassets\TrainingAcademyManagmentSystem.StaticWebAssets.xml
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\scopedcss\bundle\TrainingAcademyManagmentSystem.styles.css
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.RazorTargetAssemblyInfo.cache
+E:\Final Project\Backend\TrainingAcademyManagmentSystem\obj\Debug\netcoreapp3.1\TrainingAcademyManagmentSystem.genruntimeconfig.cache
