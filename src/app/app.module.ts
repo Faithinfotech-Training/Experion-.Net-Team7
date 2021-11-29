@@ -5,17 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ResourceEnquiryComponent } from './resource-enquiry/resource-enquiry.component';
+import { LeadComponent } from './lead/lead.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule
+    ResourceEnquiryComponent,
+    LeadComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
