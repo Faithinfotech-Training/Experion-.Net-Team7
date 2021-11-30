@@ -1,0 +1,126 @@
+<h3>Course Enquiry Form</h3>
+<form name="resourceEnquiry" #form="ngForm" autocomplete="off" (ngSubmit)="onSubmit(form)">
+    <!-- Course Enquiry ID and lead ID Auto Generate hide from user -->
+    CourseId<input type="number" name="CourseId" class="form-control" 
+        [(ngModel)]="courseEnquiryService.formData.CourseId">
+
+
+    <!-- Lead id  -->
+
+    <div class="form-group">
+
+        <label for="LeadId">LeadId</label>
+
+        <input type="text" name="LeadId" #LeadId="ngModel" [(ngModel)]="courseEnquiryService.formData.LeadId"
+           disabled class="form-control">
+    </div>
+
+    <!-- Lead Name  -->
+
+    <div class="form-group">
+
+        <label for="">Name</label>
+
+        <input name="LeadName" #LeadName="ngModel" [(ngModel)]="leadService.formData.LeadName" class="form-control"
+            placeholder="Enter your name" minlength="5" maxlength="25" required
+            [ngClass]="{ 'is-invalid': LeadName.touched && LeadName.invalid}">
+        <div class="validation-error" *ngIf="LeadName.touched && LeadName.invalid">
+
+            <div *ngIf="LeadName.errors.required">Name is required</div>
+
+        </div>
+    </div>
+
+    <!-- Lead Contact  -->
+
+    <div class="form-group">
+
+        <label for="contact">Contact</label>
+
+        <input type="number" name="LeadContact" #LeadContact="ngModel" [(ngModel)]="leadService.formData.LeadContact"
+            class="form-control" placeholder="Enter your Contact Number" maxlength="10" required
+            [ngClass]="{ 'is-invalid': LeadContact.touched && LeadContact.invalid}">
+        <div class="validation-error" *ngIf="LeadContact.touched && LeadContact.invalid">
+
+            <div *ngIf="LeadContact.errors.required">Contact is required</div>
+
+        </div>
+    </div>
+
+
+
+    <!-- Lead Email  -->
+    <div class="form-group">
+
+        <label for="email">Email</label>
+
+        <input type="email" name="LeadEmail" #LeadEmail="ngModel" [(ngModel)]="leadService.formData.LeadEmail"
+            class="form-control" placeholder="Enter your Email " required
+            [ngClass]="{ 'is-invalid': LeadEmail.touched && LeadEmail.invalid}">
+        <div class="validation-error" *ngIf="LeadEmail.touched && LeadEmail.invalid">
+
+            <div *ngIf="LeadEmail.errors.required">Email is required</div>
+
+        </div>
+    </div>
+
+    <!-- Lead Status  -->
+    <div class="form-group">
+
+        <label for="LeadStatus"></label>
+
+        <input type="hidden" name="LeadStatus" #LeadStatus="ngModel" [(ngModel)]="leadService.formData.LeadStatus"
+            class="form-control">
+    </div>
+
+    <!-- Query  -->
+    <div class="form-group">
+        <label for="Query">Query</label>
+        <textarea name="Query" id="Query" cols="20" rows="7" #Query="ngModel"
+            [(ngModel)]="courseEnquiryService.formData.Query" class="form-control"
+            placeholder="Enter your Query for this resource " required
+            [ngClass]="{ 'is-invalid': Query.touched && Query.invalid }"></textarea>
+        <div class="validation-error" *ngIf="Query.touched && Query.invalid">
+            <div *ngIf="Query.errors.required">Query is required</div>
+        </div>
+
+    </div>
+
+    <!-- Enquiry Date  -->
+    <div class="form-group">
+
+        <label for="EnquiryDate"></label>
+
+        <input type="hidden" name="EnquiryDate" #EnquiryDate="ngModel"
+            [(ngModel)]="courseEnquiryService.formData.EnquiryDate" class="form-control">
+    </div>
+    <!-- Occupation  -->
+    <div class="form-group">
+
+        <label for="LeadQualification">Occupation</label>
+
+        <input type="text" name="LeadQualification" #LeadQualification="ngModel" [(ngModel)]="leadService.formData.LeadQualification"
+            class="form-control" required
+            [ngClass]="{ 'is-invalid': LeadQualification.touched && LeadQualification.invalid}">
+        <div class="validation-error" *ngIf="LeadQualification.touched && LeadQualification.invalid">
+
+            <div *ngIf="LeadQualification.errors.required">Occupation is required</div>
+
+        </div>
+    </div>
+
+
+    <!-- Submit button  -->
+    <br>
+    <div class="form-group">
+        <button type="submit" [disabled]="!(form.valid && form.dirty)"
+            class="btn btn-lg btn-primary form-control">Submit
+
+        </button>
+    </div>
+
+
+
+
+
+</form>

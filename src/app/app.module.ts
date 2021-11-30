@@ -1,10 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { ResourcesComponent } from './resources/resources.component';
 import { ResourceComponent } from './resources/resource/resource.component';
@@ -13,21 +12,20 @@ import { ResourceService } from './shared/resource.service';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-
 import { CoursesComponent } from './courses/courses.component';
 import { AddCourcesComponent } from './add-cources/add-cources.component';
 import { EditCourcesComponent } from './edit-cources/edit-cources.component';
 import { CoursesService } from './shared/courses.service';
-
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-
 import { LoginComponent } from './login/login.component';
 import { AuthService } from './shared/auth.service';
 import{LeadComponent}from'./lead/lead.component';
 import{ResourceEnquiryComponent}from'./resource-enquiry/resource-enquiry.component';
 import { AdminComponent } from './admin/admin.component';
 import { ManagerComponent } from './manager/manager.component';
+import { AuthGuard } from './shared/auth.guard';
+import{TokenInterceptor}from'./shared/token.interceptor';
+import { CourseEnquiryComponent } from './course-enquiry/course-enquiry.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +40,8 @@ import { ManagerComponent } from './manager/manager.component';
     ResourceEnquiryComponent,
     LeadComponent,
     AdminComponent,
-    ManagerComponent
+    ManagerComponent,
+    CourseEnquiryComponent
     
   ],
   imports: [
@@ -68,7 +67,14 @@ import { ManagerComponent } from './manager/manager.component';
     RouterModule,
     CoursesService,
     AuthService,
-    CoursesService
+    CoursesService,
+    AuthGuard,
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:TokenInterceptor,
+      multi:true
+    }
+
   ],
   bootstrap: [AppComponent]
 })
