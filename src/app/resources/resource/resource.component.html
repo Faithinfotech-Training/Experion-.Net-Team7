@@ -10,8 +10,8 @@
     <div class="form-group">
 
         <label>Resource Name</label>
-        <input name="ResourceName" #ResourceName="ngModel" [ngModel]="resService.formData.ResourceName"
-            class="form-control" placeholder="Enter resource name" minlength="5" maxlength="25" required
+        <input type="text" name="ResourceName" #ResourceName="ngModel" [ngModel]="resService.formData.ResourceName"
+            class="form-control" placeholder="Enter resource name" minlength="5" maxlength="25" required pattern="[A-Za-z]{1,32}"
             [ngClass]="{'is-invalid':ResourceName.touched && ResourceName.invalid}" />
         <div class="validation-error" *ngIf="ResourceName.touched && ResourceName.invalid">
 
@@ -24,7 +24,7 @@
 
         <label>Resource Description</label>
         <input type="text" name="ResourceDescription" #ResourceDescription="ngModel" [ngModel]="resService.formData.ResourceDescription"
-            class="form-control" placeholder="Enter Description" minlength="5" maxlength="25" required
+            class="form-control" placeholder="Enter Description" minlength="5" maxlength="50" required pattern="[A-Za-z]{1,32}"
             [ngClass]="{'is-invalid':ResourceDescription.touched && ResourceDescription.invalid}" />
         <div class="validation-error" *ngIf="ResourceDescription.touched && ResourceDescription.invalid">
 
@@ -36,8 +36,8 @@
     <div class="form-group">
 
         <label>Price</label>
-        <input type="number" name="ResourceCost" id="ResourceCost" #ResourceCost="ngModel"
-            [ngModel]="resService.formData.ResourceCost" class="form-control" required
+        <input type="text" name="ResourceCost" id="ResourceCost" #ResourceCost="ngModel" maxlength="10"
+            [ngModel]="resService.formData.ResourceCost" class="form-control" required pattern="^[1-9][0-9]+(\\.[0-9][0-9]?)?"
             [ngClass]="{'is-invalid':ResourceCost.touched && ResourceCost.invalid}" />
         <div class="validation-error" *ngIf="ResourceCost.touched && ResourceCost.invalid">
 
@@ -63,6 +63,9 @@
                 [(ngModel)]="resService.formData.IsPublic" class="form-check-input">
         </div>
     </div>
+
+    <!--Image upload-->
+    
 
     <!--submit button-->
     <br>

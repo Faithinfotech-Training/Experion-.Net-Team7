@@ -1,0 +1,40 @@
+<div class="container d-flex justify-content-center mt-5">
+    <div class="card">
+        <div class="top-container"> <img src="https://www.pngall.com/wp-content/uploads/5/User-Profile-PNG-Image.png"
+                class="img-fluid profile-image" width="70">
+            <div class="ml-3">
+                <h5 class="name"> {{service.leadData.LeadName}} </h5>
+                <p class="mail"> {{service.leadData.LeadEmail}} </p>
+            </div>
+        </div>
+        <!-- <div class="middle-container d-flex justify-content-between align-items-center mt-3 p-2">
+            <div class="dollar-div px-3">
+                <div class="round-div"><i class="fa fa-dollar dollar"></i></div>
+            </div>
+        </div> -->
+        <br>
+        <div class="wishlist-border pt-2"> <span class="wishlist"> {{service.leadData.LeadContact}} </span> </div>
+    
+        <form #form="ngForm" (ngSubmit)="updateLead(form)">
+            <input type="hidden" name="LeadId" #LeadId="ngModel" [(ngModel)]="service.leadData.LeadId">
+            <input type="hidden" name="LeadName" #LeadName="ngModel" [(ngModel)]="service.leadData.LeadName">
+            <input type="hidden" name="LeadContact" #LeadContact="ngModel" [(ngModel)]="service.leadData.LeadContact">
+            <input type="hidden" name="LeadEmail" #LeadEmail="ngModel" [(ngModel)]="service.leadData.LeadEmail">
+
+            <div class="fashion-studio-border pt-2">
+                <select class="form-select" aria-label="Default select example" name="LeadStatus" #LeadStatus="ngModel"
+                    [(ngModel)]="service.formData.LeadStatus">
+                    <option selected> Select status</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Interested">Interested</option>
+                    <option value="Selected">Selected</option>
+                    <option value="Admitted">Admitted</option>
+                    <option value="Rejected">Rejected</option>
+                </select>
+                <br>
+                <button type="submit" class="btn btn-dark"> Update </button>
+            </div>
+
+        </form>
+    </div>
+</div>

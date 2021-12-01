@@ -79,7 +79,7 @@ export class ResourceComponent implements OnInit {
          console.log("result" + result);
          this.resetform(form);
          this.toastrService.success("Inserted resource..","Team 7")
-         this.toastrService.success('Insert!', 'success!');
+         
        }
      );
      window.location.reload();
@@ -91,7 +91,7 @@ export class ResourceComponent implements OnInit {
        (result) => {
          console.log(result);
          this.resetform(form);
-         this.toastrService.success("Inserted resource..","Team 7")
+         this.toastrService.info("Updated resource..","Team 7")
          //this.toxterService.success('Insert!', 'succes!');
          //this.empService.bindEmployee();
        }

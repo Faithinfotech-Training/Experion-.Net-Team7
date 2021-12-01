@@ -26,6 +26,8 @@ import { ManagerComponent } from './manager/manager.component';
 import { AuthGuard } from './shared/auth.guard';
 import{TokenInterceptor}from'./shared/token.interceptor';
 import { CourseEnquiryComponent } from './course-enquiry/course-enquiry.component';
+import { ResourcePipelineComponent } from './resource-pipeline/resource-pipeline.component';
+import { EditResourcePipelineComponent } from './edit-resource-pipeline/edit-resource-pipeline.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { CourseEnquiryComponent } from './course-enquiry/course-enquiry.componen
     LeadComponent,
     AdminComponent,
     ManagerComponent,
-    CourseEnquiryComponent
+    CourseEnquiryComponent,
+    ResourcePipelineComponent,
+    EditResourcePipelineComponent
     
   ],
   imports: [

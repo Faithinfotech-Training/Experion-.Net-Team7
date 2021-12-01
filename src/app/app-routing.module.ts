@@ -13,8 +13,11 @@ import { AdminComponent } from './admin/admin.component';
 import { ManagerComponent } from './manager/manager.component';
 import{AuthGuard} from "./shared/auth.guard";
 import { CourseEnquiryComponent } from './course-enquiry/course-enquiry.component';
+import { ResourcePipelineComponent } from './resource-pipeline/resource-pipeline.component';
+import { EditResourcePipelineComponent } from './edit-resource-pipeline/edit-resource-pipeline.component';
 
 const routes: Routes = [
+  { path: '', component: LoginComponent },
   {path: 'resources',  component:ResourcesComponent},
   {path: 'resource',  component: ResourceComponent},
   {path: 'resourcelist',  component: ResourceListComponent},
@@ -27,9 +30,12 @@ const routes: Routes = [
   {path: 'lead',component: LeadComponent},
   {path:'admin',component:AdminComponent,canActivate:[AuthGuard],data:{role:'1'}},
   {path:'manager',component:ManagerComponent,canActivate:[AuthGuard],data:{role:'2'}},
-
+  {path:'resourceenquiry/:ResourceEnquiryId',component:ResourceEnquiryComponent},
   {path: 'resourceenquiry/:ResourceId',component: ResourceEnquiryComponent},
+  {path:'resourcepipeline',component:ResourcePipelineComponent},
+  {path:'editrpipeline/:id',component:EditResourcePipelineComponent},
   {path: 'courseenquiry/:CourseId',component: CourseEnquiryComponent},
+  {path:'lead/:leadId',component:LeadComponent}
  
 ];
 
