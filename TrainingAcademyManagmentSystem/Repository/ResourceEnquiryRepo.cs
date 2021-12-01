@@ -80,6 +80,8 @@ namespace TrainingAcademyManagmentSystem.Repository
                                   ResourceEnquiryId=re.ResourceEnquiryId,
                                   LeadName=l.LeadName,
                                   LeadContact=l.LeadContact,
+                                  LeadId=l.LeadId,
+                                  ResourceId=r.ResourceId,
                                   LeadEmail=l.LeadEmail,
                                   LeadStatus=l.LeadStatus,
                                   ResourceName=r.ResourceName,
