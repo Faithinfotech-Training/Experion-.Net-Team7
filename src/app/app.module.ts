@@ -26,6 +26,10 @@ import { ManagerComponent } from './manager/manager.component';
 import { AuthGuard } from './shared/auth.guard';
 import{TokenInterceptor}from'./shared/token.interceptor';
 import { CourseEnquiryComponent } from './course-enquiry/course-enquiry.component';
+import { ResourceSummaryComponent } from './resource-summary/resource-summary.component';
+import { ResourceEnquiryReportComponent } from './resource-enquiry-report/resource-enquiry-report.component';
+import { CourseEnquirySummaryComponent } from './course-enquiry-summary/course-enquiry-summary.component';
+import { CourseEnquiryReportComponent } from './course-enquiry-report/course-enquiry-report.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +45,11 @@ import { CourseEnquiryComponent } from './course-enquiry/course-enquiry.componen
     LeadComponent,
     AdminComponent,
     ManagerComponent,
-    CourseEnquiryComponent
+    CourseEnquiryComponent,
+    ResourceSummaryComponent,
+    ResourceEnquiryReportComponent,
+    CourseEnquirySummaryComponent,
+    CourseEnquiryReportComponent
     
   ],
   imports: [
