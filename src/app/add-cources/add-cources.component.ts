@@ -17,10 +17,11 @@ export class AddCourcesComponent implements OnInit {
 
   insertCourse(form?: NgForm) {
     console.log("Inserting a record ...");
+    console.log(form.value);
     this.service.addCourse(form.value).subscribe(
       (res) => {
         console.log(res);
-        window.location.reload();
+        this.router.navigateByUrl('courses');
       }
     );
   }

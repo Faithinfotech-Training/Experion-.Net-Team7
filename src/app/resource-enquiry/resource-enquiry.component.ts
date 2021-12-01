@@ -46,6 +46,8 @@ export class ResourceEnquiryComponent implements OnInit {
 
        
        this.toxter.success("Your query is registered successfully",'Success');
+       form.reset();
+      
        
       },
       (error)=>

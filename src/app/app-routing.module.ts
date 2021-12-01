@@ -16,9 +16,12 @@ import { CourseEnquiryComponent } from './course-enquiry/course-enquiry.componen
 import { ResourceSummaryComponent } from './resource-summary/resource-summary.component';
 import { ResourceEnquiryReportComponent } from './resource-enquiry-report/resource-enquiry-report.component';
 import { CourseEnquirySummaryComponent } from './course-enquiry-summary/course-enquiry-summary.component';
-import {CourseEnquiryReportComponent} from './course-enquiry-report/course-enquiry-report.component'
+import { CourseEnquiryReportComponent } from './course-enquiry-report/course-enquiry-report.component'
+import { CoursePipelineComponent } from './course-pipeline/course-pipeline.component';
+import { EditCoursePipelineComponent } from './edit-course-pipeline/edit-course-pipeline.component';
 
 const routes: Routes = [
+  { path: '', component: LoginComponent },
   { path: 'resources', component: ResourcesComponent },
   { path: 'resource', component: ResourceComponent },
   { path: 'resourcelist', component: ResourceListComponent },
@@ -37,6 +40,8 @@ const routes: Routes = [
   { path: 'courseenquiryreport/:CourseEnquiryId', component: CourseEnquiryReportComponent },
   { path: 'resourceenquiry/:ResourceId', component: ResourceEnquiryComponent },
   { path: 'courseenquiry/:CourseId', component: CourseEnquiryComponent },
+  { path: 'coursepipeline', component: CoursePipelineComponent },
+  { path: 'editcpipeline/:id', component: EditCoursePipelineComponent }
 
 ];
 

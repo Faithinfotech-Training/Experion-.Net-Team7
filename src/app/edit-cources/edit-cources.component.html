@@ -40,6 +40,14 @@
             </label>
         </div>
 
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="IsAvailable" id="flexCheckDefault" name="IsAvailable"
+                #IsAvailable="ngModel" [(ngModel)]="service.formData.IsAvailable">
+            <label class="form-check-label" for="IsPublic">
+                Active Status
+            </label>
+        </div>
+
         <div class="col-12">
             <button type="submit" class="btn btn-primary"> Add </button>
         </div>

@@ -30,6 +30,9 @@ import { ResourceSummaryComponent } from './resource-summary/resource-summary.co
 import { ResourceEnquiryReportComponent } from './resource-enquiry-report/resource-enquiry-report.component';
 import { CourseEnquirySummaryComponent } from './course-enquiry-summary/course-enquiry-summary.component';
 import { CourseEnquiryReportComponent } from './course-enquiry-report/course-enquiry-report.component';
+import { CoursePipelineComponent } from './course-pipeline/course-pipeline.component';
+import { EditCoursePipelineComponent } from './edit-course-pipeline/edit-course-pipeline.component';
+import { CoursePipelineService} from './shared/course-pipeline.service';
 
 @NgModule({
   declarations: [
@@ -49,7 +52,9 @@ import { CourseEnquiryReportComponent } from './course-enquiry-report/course-enq
     ResourceSummaryComponent,
     ResourceEnquiryReportComponent,
     CourseEnquirySummaryComponent,
-    CourseEnquiryReportComponent
+    CourseEnquiryReportComponent,
+    CoursePipelineComponent,
+    EditCoursePipelineComponent
     
   ],
   imports: [
@@ -81,8 +86,8 @@ import { CourseEnquiryReportComponent } from './course-enquiry-report/course-enq
       provide:HTTP_INTERCEPTORS,
       useClass:TokenInterceptor,
       multi:true
-    }
-
+    },
+    CoursePipelineService 
   ],
   bootstrap: [AppComponent]
 })
