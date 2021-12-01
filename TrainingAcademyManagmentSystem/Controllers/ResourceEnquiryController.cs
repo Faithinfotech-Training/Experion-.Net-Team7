@@ -162,5 +162,28 @@ namespace TrainingAcademyManagmentSystem.Controllers
         }
 
         #endregion
+
+        #region Get all enquiry details by id
+        [HttpGet]
+        [Route("EnquiryReportById")]
+        public async Task<IActionResult> GetResourceEnquiryReportById(int id)
+        {
+            try
+            {
+                var details = await resourceEnquiry.GetresourceEnquiryReportById(id);
+
+                if (details == null)
+                {
+                    return NotFound();
+                }
+                return Ok(details);
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
+
+        #endregion
     }
 }

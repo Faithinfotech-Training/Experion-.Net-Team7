@@ -100,6 +100,41 @@ namespace TrainingAcademyManagmentSystem.Repository
             return null;
         }
 
+        //get course enquiry report by id 
+        public async Task<List<CourseEquiryModel>> GetCourseEnquiryReportById(int id)
+        {
+            //get details from lead and Course enquiry table using linq
+            if (db != null)
+            {
+                return await(from re in db.CourseEnquiry
+                             join l in db.Lead on re.LeadId equals l.LeadId
+                             join r in db.Courses on re.CourseId equals r.CourseId
+                             where re.CourseEnquiryId==id
+                             select new CourseEquiryModel
+                             {
+                                 LeadId = l.LeadId,
+                                 LeadName = l.LeadName,
+                                 LeadContact = l.LeadContact,
+                                 LeadEmail = l.LeadEmail,
+                                 LeadStatus = l.LeadStatus,
+                                 LeadQualification = l.LeadQualification,
+                                 CourseId = r.CourseId,
+                                 CourseName = r.CourseName,
+                                 CoursePrice = r.CoursePrice,
+                                 CourseDescription = r.CourseDescription,
+                                 IsAvailable = r.IsAvailable,
+                                 IsPublic = r.IsPublic,
+                                 CourseEnquiryId = re.CourseEnquiryId,
+                                 Query = re.Query,
+                                 EnquiryDate = re.EnquiryDate
+
+                             }
+
+                              ).ToListAsync();
+            }
+            return null;
+        }
+
         //update Course enquiry
         public async Task<CourseEnquiry> UpdateCourseEnquiry(CourseEnquiry enquiry)
         {
