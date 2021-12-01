@@ -55,11 +55,10 @@ namespace TrainingAcademyManagmentSystem.Repository
                 dbres.IsAvailable = false;
                 db.Resource.Update(dbres);
                 await db.SaveChangesAsync();
-
+        
                 return dbres;
             }
             return null;
-
 
         }
         #endregion

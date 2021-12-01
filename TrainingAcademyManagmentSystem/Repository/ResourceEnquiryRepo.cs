@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TrainingAcademyManagmentSystem.Models;
-using TrainingAcademyManagmentSystem.ViewModel;
 
 namespace TrainingAcademyManagmentSystem.Repository
 {
@@ -17,7 +16,6 @@ namespace TrainingAcademyManagmentSystem.Repository
             this.db = db;
         }
 
-        //add resource enquiry
         public async Task<int> AddResourceEnquiry(ResourceEnquiry enquiry)
         {
             if (db != null)

@@ -56,8 +56,8 @@ namespace TrainingAcademyManagmentSystem.Controllers
         [HttpPost]
         public async Task<IActionResult> AddCourse([FromBody]Courses course)
         {
-            try
-            {
+ /*           try
+            {*/
                 Courses added = await courseRepo.AddCourse(course);
                 if (added.CourseId>0)
                 {
@@ -67,11 +67,11 @@ namespace TrainingAcademyManagmentSystem.Controllers
                 {
                     return NotFound();
                 }
-            }
+/*            }
             catch (Exception)
             {
                 return BadRequest();
-            }
+            }*/
         }
 
         #endregion
