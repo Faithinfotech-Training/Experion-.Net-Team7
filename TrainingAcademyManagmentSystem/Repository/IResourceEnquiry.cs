@@ -26,6 +26,9 @@ namespace TrainingAcademyManagmentSystem.Repository
 
         //update resource enquiry
         public Task<ResourceEnquiry> UpdateResourceEnquiry(ResourceEnquiry enquiry);
+        
+        //get all resource enquiry details
+        public  Task<List<ResourceEnquiryModel>> GetResourceEnquiryReport();
 
 
 

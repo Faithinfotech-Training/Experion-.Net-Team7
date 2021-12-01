@@ -17,7 +17,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TrainingAcademyManagmentSystem.Repository;
 using TrainingAcademyManagmentSystem.Models;
-using TrainingAcademyManagmentSystem.Repository;
+
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace TrainingAcademyManagmentSystem
@@ -90,16 +90,10 @@ namespace TrainingAcademyManagmentSystem
 
 
             services.AddScoped<ICourseRepo, CourseRepo>();
-           
-            //connecting to db 
-            services.AddDbContext<TrainingManagmentSystemContext>(
-            options =>
-            options.UseSqlServer(Configuration.GetConnectionString("Connection"))
-            );
-
             services.AddScoped<IResourceEnquiry, ResourceEnquiryRepo>();
             services.AddScoped<ICourseEnquiryRepo, CourseEnquiryRepo>();
             services.AddScoped<IPageVisitRepo, PageVisitRepo>();
+            services.AddScoped<IUserRepo, UserRepo>();
             services.AddScoped<ILeadRepo, LeadRepo>();
             services.AddScoped<IResourceRepo, ResourceRepo>();
 
