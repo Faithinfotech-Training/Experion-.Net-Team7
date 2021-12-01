@@ -25,7 +25,13 @@ namespace TrainingAcademyManagmentSystem.Repository
         //update Course enquiry
         public Task<CourseEnquiry> UpdateCourseEnquiry(CourseEnquiry enquiry);
 
+        //get course enquiry details
         public Task<List<CourseEquiryModel>> GetCourseEnquiryReport();
+
+        //get course enquiry details by course enquiry id
+        public Task<List<CourseEquiryModel>> GetCourseEnquiryReportById(int id);
+
+
 
 
 
