@@ -92,6 +92,7 @@ namespace TrainingAcademyManagmentSystem
             services.AddScoped<ICourseRepo, CourseRepo>();
             services.AddScoped<IResourceEnquiry, ResourceEnquiryRepo>();
             services.AddScoped<ICourseEnquiryRepo, CourseEnquiryRepo>();
+            services.AddScoped<IPageVisitRepo, PageVisitRepo>();
             services.AddScoped<IUserRepo, UserRepo>();
             services.AddScoped<ILeadRepo, LeadRepo>();
         }
