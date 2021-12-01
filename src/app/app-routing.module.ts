@@ -13,6 +13,8 @@ import { AdminComponent } from './admin/admin.component';
 import { ManagerComponent } from './manager/manager.component';
 import{AuthGuard} from "./shared/auth.guard";
 import { CourseEnquiryComponent } from './course-enquiry/course-enquiry.component';
+import { EditCoursePipelineComponent } from './edit-course-pipeline/edit-course-pipeline.component';
+import { CoursePipelineComponent } from './course-pipeline/course-pipeline.component';
 
 const routes: Routes = [
   {path: 'resources',  component:ResourcesComponent},
@@ -30,6 +32,8 @@ const routes: Routes = [
 
   {path: 'resourceenquiry/:ResourceId',component: ResourceEnquiryComponent},
   {path: 'courseenquiry/:CourseId',component: CourseEnquiryComponent},
+  {path:'coursepipeline',component: CoursePipelineComponent},
+  {path:'editcpipeline/:id', component: EditCoursePipelineComponent}
  
 ];
 

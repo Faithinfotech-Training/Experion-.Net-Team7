@@ -26,6 +26,9 @@ import { ManagerComponent } from './manager/manager.component';
 import { AuthGuard } from './shared/auth.guard';
 import{TokenInterceptor}from'./shared/token.interceptor';
 import { CourseEnquiryComponent } from './course-enquiry/course-enquiry.component';
+import { CoursePipelineComponent } from './course-pipeline/course-pipeline.component';
+import { EditCoursePipelineComponent } from './edit-course-pipeline/edit-course-pipeline.component';
+import { CoursePipelineService} from './shared/course-pipeline.service';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,9 @@ import { CourseEnquiryComponent } from './course-enquiry/course-enquiry.componen
     LeadComponent,
     AdminComponent,
     ManagerComponent,
-    CourseEnquiryComponent
+    CourseEnquiryComponent,
+    CoursePipelineComponent,
+    EditCoursePipelineComponent
     
   ],
   imports: [
@@ -73,8 +78,8 @@ import { CourseEnquiryComponent } from './course-enquiry/course-enquiry.componen
       provide:HTTP_INTERCEPTORS,
       useClass:TokenInterceptor,
       multi:true
-    }
-
+    },
+    CoursePipelineService 
   ],
   bootstrap: [AppComponent]
 })
