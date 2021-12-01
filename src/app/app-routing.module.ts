@@ -24,10 +24,10 @@ const routes: Routes = [
   { path:'addcourse', component:AddCourcesComponent },
   { path:'editcourse/:courseId', component:EditCourcesComponent },
   {path: 'login',component: LoginComponent},
+  {path: '',component: LoginComponent},
   {path: 'lead',component: LeadComponent},
   {path:'admin',component:AdminComponent,canActivate:[AuthGuard],data:{role:'1'}},
   {path:'manager',component:ManagerComponent,canActivate:[AuthGuard],data:{role:'2'}},
-
   {path: 'resourceenquiry/:ResourceId',component: ResourceEnquiryComponent},
   {path: 'courseenquiry/:CourseId',component: CourseEnquiryComponent},
  
