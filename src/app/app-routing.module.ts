@@ -7,15 +7,20 @@ import { AddCourcesComponent } from './add-cources/add-cources.component';
 import { CoursesComponent } from './courses/courses.component';
 import { EditCourcesComponent } from './edit-cources/edit-cources.component';
 import { LoginComponent } from './login/login.component';
-import{LeadComponent}from'./lead/lead.component';
-import{ResourceEnquiryComponent}from'./resource-enquiry/resource-enquiry.component';
+import { LeadComponent } from './lead/lead.component';
+import { ResourceEnquiryComponent } from './resource-enquiry/resource-enquiry.component';
 import { AdminComponent } from './admin/admin.component';
 import { ManagerComponent } from './manager/manager.component';
-import{AuthGuard} from "./shared/auth.guard";
+import { AuthGuard } from "./shared/auth.guard";
 import { CourseEnquiryComponent } from './course-enquiry/course-enquiry.component';
 import { ResourcePipelineComponent } from './resource-pipeline/resource-pipeline.component';
 import { EditResourcePipelineComponent } from './edit-resource-pipeline/edit-resource-pipeline.component';
-
+import { ResourceSummaryComponent } from './resource-summary/resource-summary.component';
+import { ResourceEnquiryReportComponent } from './resource-enquiry-report/resource-enquiry-report.component';
+import { CourseEnquirySummaryComponent } from './course-enquiry-summary/course-enquiry-summary.component';
+import { CourseEnquiryReportComponent } from './course-enquiry-report/course-enquiry-report.component'
+import { CoursePipelineComponent } from './course-pipeline/course-pipeline.component';
+import { EditCoursePipelineComponent } from './edit-course-pipeline/edit-course-pipeline.component';
 const routes: Routes = [
   { path: '', component: LoginComponent },
   {path: 'resources',  component:ResourcesComponent},
@@ -35,8 +40,15 @@ const routes: Routes = [
   {path:'resourcepipeline',component:ResourcePipelineComponent},
   {path:'editrpipeline/:id',component:EditResourcePipelineComponent},
   {path: 'courseenquiry/:CourseId',component: CourseEnquiryComponent},
-  {path:'lead/:leadId',component:LeadComponent}
- 
+  {path:'lead/:leadId',component:LeadComponent},
+  { path: 'resourcesummary', component: ResourceSummaryComponent },
+  { path: 'courseenquirysummary', component: CourseEnquirySummaryComponent },
+  { path: 'resourceenquiryreport/:ResourceEnquiryId', component: ResourceEnquiryReportComponent },
+  { path: 'courseenquiryreport/:CourseEnquiryId', component: CourseEnquiryReportComponent },
+  { path: 'courseenquiry/:CourseId', component: CourseEnquiryComponent },
+  { path: 'coursepipeline', component: CoursePipelineComponent },
+  { path: 'editcpipeline/:id', component: EditCoursePipelineComponent }
+
 ];
 
 @NgModule({

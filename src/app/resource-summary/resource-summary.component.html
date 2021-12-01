@@ -1,0 +1,39 @@
+
+<div class="container">
+    <div class="header">
+        <h5>Resource Enquiry Summary</h5>
+        <div class="form-group">
+             <input type="text" class="form-control" placeholder="Search here..." 
+             [(ngModel)]="filter">
+        </div>
+        <br>
+        
+        <!-- <a  [routerLink]="['resource-summary']" class="btn btn-success" style="float: right;margin-bottom:10px;" >Add Resource</a> -->
+    </div>
+    
+    <table style="border: 0;"  class="table table-striped" >
+        <thead>
+            <tr>
+                <th>ResourceEnquiry Id</th>
+                <th>Lead Name</th>
+                <th>Resource Name</th>
+                <th>Lead Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let res of resourceEnquiryService.resourceEnquiryModel| filter:filter | paginate: {itemsPerPage:6, currentPage:page}" >
+                <td>{{res.ResourceEnquiryId}}</td>
+                <td >{{res.LeadName}}</td>
+                <td >{{res.ResourceName}}</td>
+                <td>{{res.LeadStatus}}</td>
+                <td>
+                    <button class="btn btn-info btn-sm" (click)="viewDetails(res.ResourceEnquiryId)">View Details</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="footer">
+        <!--pagination-->
+        <pagination-controls (pageChange)="page=($event)"></pagination-controls>
+    </div>
+</div>

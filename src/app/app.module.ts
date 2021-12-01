@@ -28,6 +28,13 @@ import{TokenInterceptor}from'./shared/token.interceptor';
 import { CourseEnquiryComponent } from './course-enquiry/course-enquiry.component';
 import { ResourcePipelineComponent } from './resource-pipeline/resource-pipeline.component';
 import { EditResourcePipelineComponent } from './edit-resource-pipeline/edit-resource-pipeline.component';
+import { ResourceSummaryComponent } from './resource-summary/resource-summary.component';
+import { ResourceEnquiryReportComponent } from './resource-enquiry-report/resource-enquiry-report.component';
+import { CourseEnquirySummaryComponent } from './course-enquiry-summary/course-enquiry-summary.component';
+import { CourseEnquiryReportComponent } from './course-enquiry-report/course-enquiry-report.component';
+import { CoursePipelineComponent } from './course-pipeline/course-pipeline.component';
+import { EditCoursePipelineComponent } from './edit-course-pipeline/edit-course-pipeline.component';
+import { CoursePipelineService} from './shared/course-pipeline.service';
 
 @NgModule({
   declarations: [
@@ -45,7 +52,13 @@ import { EditResourcePipelineComponent } from './edit-resource-pipeline/edit-res
     ManagerComponent,
     CourseEnquiryComponent,
     ResourcePipelineComponent,
-    EditResourcePipelineComponent
+    EditResourcePipelineComponent,
+    ResourceSummaryComponent,
+    ResourceEnquiryReportComponent,
+    CourseEnquirySummaryComponent,
+    CourseEnquiryReportComponent,
+    CoursePipelineComponent,
+    EditCoursePipelineComponent
     
   ],
   imports: [
@@ -77,8 +90,8 @@ import { EditResourcePipelineComponent } from './edit-resource-pipeline/edit-res
       provide:HTTP_INTERCEPTORS,
       useClass:TokenInterceptor,
       multi:true
-    }
-
+    },
+    CoursePipelineService 
   ],
   bootstrap: [AppComponent]
 })
