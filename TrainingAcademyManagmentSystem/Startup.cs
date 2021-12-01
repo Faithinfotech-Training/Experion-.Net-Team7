@@ -1,4 +1,4 @@
-
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -17,7 +17,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TrainingAcademyManagmentSystem.Repository;
 using TrainingAcademyManagmentSystem.Models;
-using TrainingAcademyManagmentSystem.Repository;
+
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace TrainingAcademyManagmentSystem
@@ -86,14 +86,17 @@ namespace TrainingAcademyManagmentSystem
             services.AddCors();
 
 
+          
 
 
-            services.AddScoped<IResourceRepo, ResourceRepo>();
             services.AddScoped<ICourseRepo, CourseRepo>();
             services.AddScoped<IResourceEnquiry, ResourceEnquiryRepo>();
             services.AddScoped<ICourseEnquiryRepo, CourseEnquiryRepo>();
             services.AddScoped<IPageVisitRepo, PageVisitRepo>();
+            services.AddScoped<IUserRepo, UserRepo>();
             services.AddScoped<ILeadRepo, LeadRepo>();
+            services.AddScoped<IResourceRepo, ResourceRepo>();
+
         }
 
             // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

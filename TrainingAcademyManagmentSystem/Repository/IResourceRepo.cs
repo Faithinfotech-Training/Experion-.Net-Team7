@@ -8,7 +8,6 @@ namespace TrainingAcademyManagmentSystem.Repository
 {
     public interface IResourceRepo
     {
-       //
         Task<List<Resource>> GetResources();
 
         Task<Resource> AddResource(Resource resource);
