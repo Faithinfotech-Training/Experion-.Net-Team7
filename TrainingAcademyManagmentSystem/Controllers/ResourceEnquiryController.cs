@@ -139,7 +139,7 @@ namespace TrainingAcademyManagmentSystem.Controllers
         }
 
         #endregion
-
+        
         #region Get all enquiry details
         [HttpGet]
         [Route("EnquiryReport")]
