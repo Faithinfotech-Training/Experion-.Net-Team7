@@ -1,7 +1,7 @@
-<h3>Resource Enquiry Form</h3>
+<h3 class="text-center">Resource Enquiry Form</h3>
 <form name="resourceEnquiry" #form="ngForm" autocomplete="off" (ngSubmit)="onSubmit(form)">
     <!-- Resource Enquiry ID and lead ID Auto Generate hide from user -->
-     ResourceId<input type="number" name="ResourceId"
+     <input type="hidden" name="ResourceId"
         [(ngModel)]="resourceEnquiryService.formData.ResourceId">
     
 
@@ -11,7 +11,7 @@
 
                 <label for="LeadId"></label>
         
-                <input type="number" name="LeadId" #LeadId="ngModel" [(ngModel)]="resourceEnquiryService.formData.LeadId"
+                <input type="hidden" name="LeadId" #LeadId="ngModel" [(ngModel)]="resourceEnquiryService.formData.LeadId"
                     class="form-control"
                     >
             </div>
@@ -40,7 +40,8 @@
 
         <input type="number" name="LeadContact" #LeadContact="ngModel" [(ngModel)]="leadService.formData.LeadContact"
             class="form-control" placeholder="Enter your Contact Number" maxlength="10" required
-            [ngClass]="{ 'is-invalid': LeadContact.touched && LeadContact.invalid}">
+            [ngClass]="{ 'is-invalid': LeadContact.touched && LeadContact.invalid}"
+            pattern="[7-9]{1}[0-9]{9}">
         <div class="validation-error" *ngIf="LeadContact.touched && LeadContact.invalid">
 
             <div *ngIf="LeadContact.errors.required">Contact is required</div>
@@ -57,7 +58,8 @@
 
         <input type="email" name="LeadEmail" #LeadEmail="ngModel" [(ngModel)]="leadService.formData.LeadEmail"
             class="form-control" placeholder="Enter your Email " required
-            [ngClass]="{ 'is-invalid': LeadEmail.touched && LeadEmail.invalid}">
+            [ngClass]="{ 'is-invalid': LeadEmail.touched && LeadEmail.invalid}"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
         <div class="validation-error" *ngIf="LeadEmail.touched && LeadEmail.invalid">
 
             <div *ngIf="LeadEmail.errors.required">Email is required</div>
