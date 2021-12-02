@@ -5,6 +5,7 @@ import { ToastrService } from 'ngx-toastr';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Resource } from 'src/app/shared/resource';
 import { Location } from '@angular/common';
+import { AuthService } from 'src/app/shared/auth.service';
 
 @Component({
   selector: 'app-resource',
@@ -18,6 +19,7 @@ export class ResourceComponent implements OnInit {
   constructor(public resService: ResourceService, private toastrService: ToastrService,
     private router: Router,
     private route: ActivatedRoute,
+    private authService:AuthService,
     private location: Location) { }
 
 
@@ -50,16 +52,16 @@ export class ResourceComponent implements OnInit {
      //insert
      if (addId == 0 || addId == null) {
        this.insertResourceRecord(form);
-       //alert("inserted");
+       this.router.navigateByUrl('resourcelist');
+     
      }
      //update
      else {
        console.log("update");
        this.updateResourceRecord(form);
+       this.router.navigateByUrl('resourcelist');
      }
-     //alert("submitted");
- 
-     //form.resetForm();
+    
  
    }
  
@@ -78,11 +80,15 @@ export class ResourceComponent implements OnInit {
        (result) => {
          console.log("result" + result);
          this.resetform(form);
-         this.toastrService.success("Inserted resource..","Team 7")
+         this.toastrService.success("Inserted resource..","Success")
          
+       },
+       (error)=>
+       {
+        this.toastrService.error("Error while inserting..","Error")
        }
      );
-     window.location.reload();
+    
    }
    //update resource
    updateResourceRecord(form?: NgForm) {
@@ -92,11 +98,45 @@ export class ResourceComponent implements OnInit {
          console.log(result);
          this.resetform(form);
          this.toastrService.info("Updated resource..","Team 7")
-         //this.toxterService.success('Insert!', 'succes!');
-         //this.empService.bindEmployee();
+        
+       },
+       (error)=>
+       {
+        this.toastrService.error("Error while updating..","Error")
        }
      );
-    // window.location.reload();
+   
+  }
+
+
+  LogOut()
+  {
+   
+    this.authService.LogOut();
+    this.router.navigateByUrl("login");
+
+  }
+  IsAdmin()
+  {
+    if(localStorage.getItem("Access_Role")==='1')
+    {
+      return true;
+    }
+    else{
+      return false;
+    }
+
+  }
+  IsManager()
+  {
+    if(localStorage.getItem("Access_Role")==='2')
+    {
+      return true;
+    }
+    else{
+      return false;
+    }
+
   }
 
 

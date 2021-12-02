@@ -1,0 +1,133 @@
+<header *ngIf=this.IsAdmin()>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand text-success " href="/admin">Geo Infotech</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" routerLink='/admin' href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " routerLink='/courses' href="#">courses</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  " href=""  routerLink='/resourcelist'tabindex="-1" aria-disabled="true">Resources</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Enquiry
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="resourcepipeline">Resource Enquiry</a></li>
+                  <li><a class="dropdown-item" href="coursepipeline">Course Enquiry</a></li>
+                  
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href=""  routerLink='/pagevisit'tabindex="-1" aria-disabled="true">Page Visit</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+              &nbsp;
+              </form>
+              <button class="btn btn-outline-success" (click)="LogOut()"type="submit">logout</button>
+          </div>
+        </div>
+      </nav>
+        
+    </header>
+  
+  
+    <header *ngIf=this.IsManager()>
+      
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand text-success " href="manager">Geo Infotech</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link " aria-current="page" routerLink='/manager' href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink='/courses' href="#">courses</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="#"  routerLink='/resourcelist'tabindex="-1" aria-disabled="true">Resources</a>
+                </li>
+                
+  
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Equiry Summary
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                    <li><a class="dropdown-item" href="resourcesummary">Resources</a></li>
+                    <li><a class="dropdown-item" href="courseenquirysummary">Courses</a></li>
+                    
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active " href=""  routerLink='/pagevisit'tabindex="-1" aria-disabled="true">Page Visit</a>
+                </li>
+              </ul>
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+                &nbsp;
+                </form>
+                <button class="btn btn-outline-success" (click)="LogOut()"type="submit">logout</button>
+            </div>
+          </div>
+        </nav>
+          
+      </header>
+  
+      <br>
+      <br>
+  <div class="container">
+      <div class="header">
+          <h5 class="text-center">Page Visit Count</h5>
+          <br>
+          <br>
+          
+          <div class="form-group">
+               <input type="text" class="form-control" placeholder="Search here..." 
+               [(ngModel)]="filter">
+          </div>
+          <br>
+          
+         
+      </div>
+      
+      <table class="table table-bordered table-striped">
+          <thead>
+              <tr>
+                  <th>Page</th>
+                  <th>Count</th>
+                 
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let pages of this.pagevisitService.pageVisits| filter:filter | paginate: {itemsPerPage:5, currentPage:page}" >
+                  <td >{{pages.PageName}}</td>
+                  <td >{{pages.PageCount}}</td>
+                 
+                 
+              </tr>
+          </tbody>
+      </table>
+      <div class="footer">
+          <!--pagination-->
+          <pagination-controls (pageChange)="page=($event)"></pagination-controls>
+      </div>
+  </div>
+  

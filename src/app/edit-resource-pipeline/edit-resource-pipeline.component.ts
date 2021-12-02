@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../shared/auth.service';
 import { ResourcepipelineService } from '../shared/resourcepipeline.service';
 @Component({
   selector: 'app-edit-resource-pipeline',
@@ -10,7 +11,7 @@ import { ResourcepipelineService } from '../shared/resourcepipeline.service';
 export class EditResourcePipelineComponent implements OnInit {
   leadId: number;
   constructor(public service: ResourcepipelineService,
-    private router:Router,
+    private router:Router,private authService:AuthService,
     private route:ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -33,4 +34,13 @@ export class EditResourcePipelineComponent implements OnInit {
     );
     this.router.navigateByUrl('resourcepipeline');
   }
+
+  LogOut()
+  {
+   
+    this.authService.LogOut();
+    this.router.navigateByUrl("login");
+
+  }
+
 }

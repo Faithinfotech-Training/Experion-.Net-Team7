@@ -21,6 +21,7 @@ import { CourseEnquirySummaryComponent } from './course-enquiry-summary/course-e
 import { CourseEnquiryReportComponent } from './course-enquiry-report/course-enquiry-report.component'
 import { CoursePipelineComponent } from './course-pipeline/course-pipeline.component';
 import { EditCoursePipelineComponent } from './edit-course-pipeline/edit-course-pipeline.component';
+import { PagevisitComponent } from './pagevisit/pagevisit.component';
 const routes: Routes = [
   { path: '', component: LoginComponent },
   {path: 'resources',  component:ResourcesComponent},
@@ -35,7 +36,7 @@ const routes: Routes = [
   {path: 'lead',component: LeadComponent},
   {path:'admin',component:AdminComponent,canActivate:[AuthGuard],data:{role:'1'}},
   {path:'manager',component:ManagerComponent,canActivate:[AuthGuard],data:{role:'2'}},
-  {path:'resourceenquiry/:ResourceEnquiryId',component:ResourceEnquiryComponent},
+  //{path:'resourceenquiry/:ResourceEnquiryId',component:ResourceEnquiryComponent},
   {path: 'resourceenquiry/:ResourceId',component: ResourceEnquiryComponent},
   {path:'resourcepipeline',component:ResourcePipelineComponent},
   {path:'editrpipeline/:id',component:EditResourcePipelineComponent},
@@ -47,7 +48,8 @@ const routes: Routes = [
   { path: 'courseenquiryreport/:CourseEnquiryId', component: CourseEnquiryReportComponent },
   { path: 'courseenquiry/:CourseId', component: CourseEnquiryComponent },
   { path: 'coursepipeline', component: CoursePipelineComponent },
-  { path: 'editcpipeline/:id', component: EditCoursePipelineComponent }
+  { path: 'editcpipeline/:id', component: EditCoursePipelineComponent },
+  { path: 'pagevisit', component: PagevisitComponent }
 
 ];
 

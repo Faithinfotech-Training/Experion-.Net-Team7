@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../shared/auth.service';
 import { ResourceenquiryService } from '../shared/resourceenquiry.service';
 
 @Component({
@@ -12,6 +13,7 @@ export class ResourceEnquiryReportComponent implements OnInit {
   ResourceEnquiryId:number;
   constructor(public resourceEnquiryService:ResourceenquiryService,
     private route:ActivatedRoute,
+    private authService:AuthService,
     private router:Router) { }
 
   ngOnInit(): void {
@@ -31,6 +33,15 @@ export class ResourceEnquiryReportComponent implements OnInit {
           console.log(error)
       );
     }
+  }
+
+  //logout
+  LogOut()
+  {
+   
+    this.authService.LogOut();
+    this.router.navigateByUrl("login");
+
   }
 
 }

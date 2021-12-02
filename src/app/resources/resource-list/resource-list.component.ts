@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { AuthService } from 'src/app/shared/auth.service';
 import { Resource } from 'src/app/shared/resource';
 import { ResourceService } from 'src/app/shared/resource.service';
 
@@ -14,6 +15,7 @@ export class ResourceListComponent implements OnInit {
   filter: string;
   constructor(public resourceService: ResourceService,
     private toastrService: ToastrService,
+    private authService:AuthService,
     private router: Router) { }
 
   ngOnInit(): void {
@@ -49,4 +51,35 @@ export class ResourceListComponent implements OnInit {
     console.log(resId);
     this.router.navigate(['resource', resId]);
   }
+
+  LogOut()
+  {
+   
+    this.authService.LogOut();
+    this.router.navigateByUrl("login");
+
+  }
+  IsAdmin()
+  {
+    if(localStorage.getItem("Access_Role")==='1')
+    {
+      return true;
+    }
+    else{
+      return false;
+    }
+
+  }
+  IsManager()
+  {
+    if(localStorage.getItem("Access_Role")==='2')
+    {
+      return true;
+    }
+    else{
+      return false;
+    }
+
+  }
+
 }

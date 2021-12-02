@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../shared/auth.service';
 import { CourseEnquiryService } from '../shared/course-enquiry.service';
 
 @Component({
@@ -12,6 +13,7 @@ export class CourseEnquiryReportComponent implements OnInit {
 
   constructor(public courseEnquiryService: CourseEnquiryService,
     private route: ActivatedRoute,
+    private authService:AuthService,
     private router: Router) { }
 
   ngOnInit(): void {
@@ -31,6 +33,15 @@ export class CourseEnquiryReportComponent implements OnInit {
           console.log(error)
       );
     }
+  }
+
+  //logout
+  LogOut()
+  {
+   
+    this.authService.LogOut();
+    this.router.navigateByUrl("login");
+
   }
 
 }

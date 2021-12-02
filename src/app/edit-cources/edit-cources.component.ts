@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { AuthService } from '../shared/auth.service';
 import { Courses } from '../shared/courses';
 import { CoursesService } from '../shared/courses.service';
 
@@ -14,7 +16,7 @@ export class EditCourcesComponent implements OnInit {
   courseId: number;
   course: Courses = new Courses();
 
-  constructor(public service: CoursesService, private router: Router,
+  constructor(public service: CoursesService, private toxter:ToastrService,private authService:AuthService,private router: Router,
     private route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -38,9 +40,51 @@ export class EditCourcesComponent implements OnInit {
     this.service.updateCourse(form.value).subscribe(
       (res) => {
         console.log(res);
+        this.toxter.info("Edited Successfully","Success")
+        form.reset();
+        this.router.navigateByUrl('courses');
+      },
+      (error)=>
+      {
+        this.toxter.error("something went wrong","Error!");
+        
       }
     );
-    this.router.navigateByUrl('courses');
+   
   }
+
+
+  LogOut()
+  {
+   
+    this.authService.LogOut();
+    this.router.navigateByUrl("login");
+
+  }
+
+
+  IsAdmin()
+  {
+    if(localStorage.getItem("Access_Role")==='1')
+    {
+      return true;
+    }
+    else{
+      return false;
+    }
+
+  }
+  IsManager()
+  {
+    if(localStorage.getItem("Access_Role")==='2')
+    {
+      return true;
+    }
+    else{
+      return false;
+    }
+
+  }
+
 
 }

@@ -35,7 +35,8 @@ import { CourseEnquiryReportComponent } from './course-enquiry-report/course-enq
 import { CoursePipelineComponent } from './course-pipeline/course-pipeline.component';
 import { EditCoursePipelineComponent } from './edit-course-pipeline/edit-course-pipeline.component';
 import { CoursePipelineService} from './shared/course-pipeline.service';
-
+import{PageVisitService}from'./shared/page-visit.service';
+import { PagevisitComponent } from './pagevisit/pagevisit.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +59,8 @@ import { CoursePipelineService} from './shared/course-pipeline.service';
     CourseEnquirySummaryComponent,
     CourseEnquiryReportComponent,
     CoursePipelineComponent,
-    EditCoursePipelineComponent
+    EditCoursePipelineComponent,
+    PagevisitComponent
     
   ],
   imports: [
@@ -86,6 +88,7 @@ import { CoursePipelineService} from './shared/course-pipeline.service';
     AuthService,
     CoursesService,
     AuthGuard,
+    PageVisitService,
     {
       provide:HTTP_INTERCEPTORS,
       useClass:TokenInterceptor,

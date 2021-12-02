@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../shared/auth.service';
 import { CoursePipelineService } from '../shared/course-pipeline.service';
 
 @Component({
@@ -8,10 +10,17 @@ import { CoursePipelineService } from '../shared/course-pipeline.service';
 })
 export class CoursePipelineComponent implements OnInit {
 
-  constructor(public service: CoursePipelineService) { }
+  constructor(public authService:AuthService,private route:Router,public service: CoursePipelineService) { }
 
   ngOnInit(): void {
     this.service.getReport();
   }
+  
+  LogOut()
+  {
+   
+    this.authService.LogOut();
+    this.route.navigateByUrl("login");
 
+  }
 }

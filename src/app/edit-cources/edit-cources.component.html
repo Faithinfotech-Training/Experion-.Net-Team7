@@ -1,55 +1,149 @@
-<div class="container own">
-    <h3>Enter details of course to be added</h3>
+<header *ngIf=this.IsAdmin()>
+    
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-success " href="/admin">Geo Infotech</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" routerLink='/admin' href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" routerLink='/courses' href="#">courses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href=""  routerLink='/resourcelist'tabindex="-1" aria-disabled="true">Resources</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Enquiry
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="dropdown-item" href="resourcepipeline">Resource Enquiry</a></li>
+                <li><a class="dropdown-item" href="coursepipeline">Course Enquiry</a></li>
+                
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href=""  routerLink='/pagevisit'tabindex="-1" aria-disabled="true">Page Visit</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+            &nbsp;
+            </form>
+            <button class="btn btn-outline-success" (click)="LogOut()"type="submit">logout</button>
+        </div>
+      </div>
+    </nav>
+      
+  </header>
+
+
+  <header *ngIf=this.IsManager()>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand text-success " href="manager">Geo Infotech</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" routerLink='/manager' href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" routerLink='/courses' href="#">courses</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  " href="#"  routerLink='/resourcelist'tabindex="-1" aria-disabled="true">Resources</a>
+              </li>
+              
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Equiry Summary
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="resourcesummary">Resources</a></li>
+                  <li><a class="dropdown-item" href="courseenquirysummary">Courses</a></li>
+                  
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href=""  routerLink='/pagevisit'tabindex="-1" aria-disabled="true">Page Visit</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+              &nbsp;
+              </form>
+              <button class="btn btn-outline-success" (click)="LogOut()"type="submit">logout</button>
+          </div>
+        </div>
+      </nav>
+        
+    </header>    <br>
     <br>
-    <form class="row g-3" #form="ngForm" (ngSubmit)="updateCourse(form)">
-        <div class="col-md-6">
-            <input type="text" name="CourseId" #CourseId="ngModel" [(ngModel)]="service.formData.CourseId">
-        </div>
 
-        <div class="col-md-6">
-            <label for="courseName" class="form-label"> Course Name </label>
-            <input type="text" class="form-control" id="inputEmail4" name="CourseName" #CourseName="ngModel"
-                [(ngModel)]="service.formData.CourseName" required
-                [ngClass]="{ 'is-invalid': CourseName.touched && CourseName.invalid}">
-            <div class="validation-error" *ngIf="CourseName.touched && CourseName.invalid">
-                <div *ngIf="CourseName.errors.required">Name is required</div>
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <label for="price" class="form-label"> Price </label>
-            <input type="number" class="form-control" id="inputPassword4" name="CoursePrice" #CoursePrice="ngModel"
-                [(ngModel)]="service.formData.CoursePrice" required
-                [ngClass]="{ 'is-invalid': CoursePrice.touched && CoursePrice.invalid}">
-            <div class="validation-error" *ngIf="CoursePrice.touched && CoursePrice.invalid">
-                <div *ngIf="CoursePrice.errors.required"> Price is required</div>
-            </div>
-        </div>
-
-        <div class="col-12">
-            <label for="Description" class="form-label"> Description </label>
-            <input type="text" class="form-control" id="inputAddress" name="CourseDescription"
-                #CourseDescription="ngModel" [(ngModel)]="service.formData.CourseDescription">
-        </div>
-
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="IsPublic" id="flexCheckDefault" name="IsPublic"
-                #IsPublic="ngModel" [(ngModel)]="service.formData.IsPublic">
-            <label class="form-check-label" for="IsPublic">
-                Available for public?
-            </label>
-        </div>
-
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="IsAvailable" id="flexCheckDefault" name="IsAvailable"
-                #IsAvailable="ngModel" [(ngModel)]="service.formData.IsAvailable">
-            <label class="form-check-label" for="IsPublic">
-                Active Status
-            </label>
-        </div>
-
-        <div class="col-12">
-            <button type="submit" class="btn btn-primary"> Add </button>
-        </div>
-    </form>
-</div>
+    <div class="container own">
+      <h3>Enter details of course to be updated</h3>
+      <br>
+      <form class="row g-3" #form="ngForm" (ngSubmit)="updateCourse(form)">
+          <div class="col-md-12">
+              <input type="hidden" name="CourseId" #CourseId="ngModel" [(ngModel)]="service.formData.CourseId">
+          </div>
+          <br>
+          <div class="col-md-6">
+              <label for="courseName" class="form-label"> Course Name </label>
+              <input type="text" class="form-control" id="inputEmail4" name="CourseName" #CourseName="ngModel"
+                  [(ngModel)]="service.formData.CourseName" required
+                  [ngClass]="{ 'is-invalid': CourseName.touched && CourseName.invalid}">
+              <div class="validation-error" *ngIf="CourseName.touched && CourseName.invalid">
+                  <div *ngIf="CourseName.errors.required">Name is required</div>
+              </div>
+          </div>
+  
+          <div class="col-md-6">
+              <label for="price" class="form-label"> Price </label>
+              <input type="text" class="form-control" id="inputPassword4" name="CoursePrice" #CoursePrice="ngModel" maxlength="6" pattern="[0-9]+"
+                  [(ngModel)]="service.formData.CoursePrice" required
+                  [ngClass]="{ 'is-invalid': CoursePrice.touched && CoursePrice.invalid}">
+              <div class="validation-error" *ngIf="CoursePrice.touched && CoursePrice.invalid">
+                  <div *ngIf="CoursePrice.errors"> Price is required in number format </div>
+              </div>
+          </div>
+  
+          <div class="col-12">
+              <label for="Description" class="form-label"> Description </label>
+              <input type="text" class="form-control" id="inputAddress" name="CourseDescription"
+                  #CourseDescription="ngModel" [(ngModel)]="service.formData.CourseDescription">
+          </div>
+  
+          <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="IsPublic" id="flexCheckDefault" name="IsPublic"
+                  #IsPublic="ngModel" [(ngModel)]="service.formData.IsPublic">
+              <label class="form-check-label" for="IsPublic">
+                  Available for public?
+              </label>
+          </div>
+  
+          <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="IsAvailable" id="flexCheckDefault" name="IsAvailable"
+                  #IsAvailable="ngModel" [(ngModel)]="service.formData.IsAvailable">
+              <label class="form-check-label" for="IsPublic">
+                  Active Status
+              </label>
+          </div>
+  
+          <div class="col-12">
+              <button type="submit" class="btn btn-primary"> Submit </button>
+          </div>
+      </form>
+  </div>

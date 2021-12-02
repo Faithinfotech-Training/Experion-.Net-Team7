@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../shared/auth.service';
 import { CoursesService } from '../shared/courses.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class CoursesComponent implements OnInit {
   page:number=1;
   filter: string;
 
-  constructor( public service:CoursesService, private router: Router ) { }
+  constructor( public service:CoursesService,public authService:AuthService,private route:Router, private router: Router ) { }
 
   ngOnInit(): void {
     this.service.getCourses();
@@ -37,4 +38,36 @@ export class CoursesComponent implements OnInit {
    console.log(courseId);
    this.router.navigate(['editcourse',courseId]);
  }
+
+ LogOut()
+  {
+   
+    this.authService.LogOut();
+    this.route.navigateByUrl("login");
+
+  }
+
+  IsAdmin()
+  {
+    if(localStorage.getItem("Access_Role")==='1')
+    {
+      return true;
+    }
+    else{
+      return false;
+    }
+
+  }
+  IsManager()
+  {
+    if(localStorage.getItem("Access_Role")==='2')
+    {
+      return true;
+    }
+    else{
+      return false;
+    }
+
+  }
+
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../shared/auth.service';
 import { ResourcepipelineService } from '../shared/resourcepipeline.service';
 
 @Component({
@@ -8,10 +10,18 @@ import { ResourcepipelineService } from '../shared/resourcepipeline.service';
 })
 export class ResourcePipelineComponent implements OnInit {
 
-  constructor(public service:ResourcepipelineService) { }
+  constructor(public service:ResourcepipelineService,private authService:AuthService,private route:Router) { }
 
   ngOnInit(): void {
     this.service.getReport();
+  }
+
+  LogOut()
+  {
+   
+    this.authService.LogOut();
+    this.route.navigateByUrl("login");
+
   }
 
 }

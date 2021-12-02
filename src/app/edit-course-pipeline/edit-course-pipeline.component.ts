@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../shared/auth.service';
 import { CoursePipelineService } from '../shared/course-pipeline.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class EditCoursePipelineComponent implements OnInit {
 
   leadId: number;
 
-  constructor( public service: CoursePipelineService, private router: Router,
+  constructor( public service: CoursePipelineService, private authService:AuthService,private router: Router,
     private route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -35,6 +36,15 @@ export class EditCoursePipelineComponent implements OnInit {
       }
     );
     this.router.navigateByUrl('coursepipeline');
+  }
+
+
+  LogOut()
+  {
+   
+    this.authService.LogOut();
+    this.router.navigateByUrl("login");
+
   }
 
 }
