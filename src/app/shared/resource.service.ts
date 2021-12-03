@@ -12,12 +12,19 @@ export class ResourceService {
   //create an instance of employee
   formData:Resource=new Resource();
   resources:Resource[];
+  availableResource:Resource[];
   constructor(private httpClient:HttpClient) { }
 
   bindResource(){
     this.httpClient.get(environment.apiUrl+"api/resource/GetResources")
     .toPromise().then(response=>
       this.resources=response as Resource[])
+  
+  }
+  bindAvailableResource(){
+    this.httpClient.get(environment.apiUrl+"api/Resource/GetAvailableResources")
+    .toPromise().then(response=>
+      this.availableResource=response as Resource[])
   
   }
 

@@ -1,0 +1,22 @@
+<br>
+
+<div class="container">
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let resource of service.availableResource">
+      <div class="card h-100 shadow p-3 mb-5 bg-white rounded">
+        <img src="https://www.ucd.ie/itservices/t4media/virtual_learning.png"class="card-img-top" alt="...">
+        <div class="card-body">
+            <hr>
+          <h5 class="card-title">{{resource.ResourceName|uppercase}}</h5>
+          <br>
+        
+          <p class="card-text">{{resource.ResourceDescription}}</p>
+          
+          <hr>
+          <p class="card-text" >Price: {{resource.ResourceCost}}</p>
+          <button class="btn btn-primary btn-sm float-right" (click)="onEnquiry(resource.ResourceId)">Inquire</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
