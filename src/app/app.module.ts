@@ -43,6 +43,9 @@ import { UsercourselistComponent } from './usercourselist/usercourselist.compone
 import { UserresourcelistComponent } from './userresourcelist/userresourcelist.component';
 import { HomeComponent } from './home/home.component';
 import { UserNavComponent } from './user-nav/user-nav.component';
+import { UserFooterComponent } from './user-footer/user-footer.component';
+import { AdminnavComponent } from './adminnav/adminnav.component';
+import { ManagernavComponent } from './managernav/managernav.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -72,7 +75,10 @@ import { UserNavComponent } from './user-nav/user-nav.component';
     UsercourselistComponent,
     UserresourcelistComponent,
     HomeComponent,
-    UserNavComponent
+    UserNavComponent,
+    UserFooterComponent,
+    AdminnavComponent,
+    ManagernavComponent
     
   ],
   imports: [

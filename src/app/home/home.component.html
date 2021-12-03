@@ -104,12 +104,13 @@
 
       <div class="row" data-aos="zoom-in" data-aos-delay="100">
 
-        <div *ngFor="let course of courseService.courses | slice:0:3" class="col-lg-4 col-md-6 d-flex align-items-stretch">
-          <div class="course-item">
-            <img src="https://campustechnology.com/-/media/EDU/CampusTechnology/2019-Images/20191209online.jpg" class="img-fluid" alt="...">
+        <div *ngFor="let course of courseService.availableCourses | slice:0:3" class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="course-item shadow p-3 mb-5 bg-white rounded">
+            <img src="https://static.naukimg.com/s/7/1290/i/homepage-banner.f33d0942.png" class="img-fluid" alt="...">
             <div class="course-content">
+              <br>
               <div class="d-flex justify-content-between align-items-center mb-3">
-                <h4> {{course.CourseName}}</h4>
+                <h4> {{course.CourseName|uppercase}}</h4>
                 <p class="price"> {{course.CoursePrice}} </p>
               </div>
               <p> {{course.CourseDescription}} </p>
@@ -132,12 +133,14 @@
 
       <div class="row" data-aos="zoom-in" data-aos-delay="100">
 
-        <div *ngFor="let res of resourceService.resources| slice:0:3" class="col-lg-4 col-md-6 d-flex align-items-stretch">
+        <div *ngFor="let res of resourceService.availableResource| slice:0:3" class="col-lg-4 col-md-6 d-flex align-items-stretch">
           <div class="course-item">
-            <img src="https://4.imimg.com/data4/RF/JA/MY-5233581/seminar-hall-design-service-500x500.jpg" class="img-fluid" alt="...">
+            <img src="https://www.ucd.ie/itservices/t4media/virtual_learning.png" class="img-fluid" alt="...">
             <div class="course-content">
+              <br>
+              
               <div class="d-flex justify-content-between align-items-center mb-3">
-                <h4> {{res.ResourceName}}  </h4>
+                <h4> {{res.ResourceName|uppercase}}  </h4>
                 <p class="price"> {{res.ResourceCost}} </p>
               </div>
               <p> {{res.ResourceDescription}}</p>
@@ -175,8 +178,8 @@
           <ul>
             <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a routerLink='/usercourselist'>Courses</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a routerLink='/userresourcelist'>Resources</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
           </ul>
         </div>

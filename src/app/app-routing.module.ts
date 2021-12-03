@@ -27,8 +27,10 @@ import { ResourceEnquiryCountComponent } from './resource-enquiry-count/resource
 import { UsercourselistComponent } from './usercourselist/usercourselist.component';
 import { UserresourcelistComponent } from './userresourcelist/userresourcelist.component';
 import { HomeComponent } from './home/home.component';
+import { ManagernavComponent } from './managernav/managernav.component';
+import { AdminnavComponent } from './adminnav/adminnav.component';
 const routes: Routes = [
-  { path: '', component: LoginComponent },
+  { path: '', component: HomeComponent },
   {path: 'resources',  component:ResourcesComponent},
   {path: 'resource',  component: ResourceComponent},
   {path: 'resourcelist',  component: ResourceListComponent},
@@ -59,7 +61,9 @@ const routes: Routes = [
   { path: 'pagevisit', component: PagevisitComponent },
   {path:'usercourselist',component:UsercourselistComponent},
   {path:'userresourcelist',component:UserresourcelistComponent},
-  { path: 'home', component: HomeComponent }
+  { path: 'home', component: HomeComponent },
+  { path: 'mn', component: ManagernavComponent },
+  {path:'an',component:AdminnavComponent}
 
 ];
 

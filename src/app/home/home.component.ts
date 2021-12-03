@@ -12,8 +12,8 @@ export class HomeComponent implements OnInit {
   constructor(public courseService: CoursesService, public resourceService: ResourceService) { }
 
   ngOnInit(): void {
-    this.courseService.getCourses();
-    this.resourceService.bindResource();
+    this.courseService.getAvailableCourses();
+    this.resourceService.bindAvailableResource();
   }
 
 }

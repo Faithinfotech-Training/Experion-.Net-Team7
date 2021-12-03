@@ -1,6 +1,6 @@
 <header *ngIf=this.IsAdmin()>
     
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand text-success " href="/admin">GEO INFOTECH</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,14 +35,15 @@
             <button class="btn btn-outline-success" (click)="LogOut()"type="submit">Logout</button>
         </div>
       </div>
-    </nav>
+    </nav> -->
       
+    <app-adminnav></app-adminnav>
   </header>
 
 
   <header *ngIf=this.IsManager()>
     
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand text-success " href="manager">GEO INFOTECH</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -79,10 +80,12 @@
               <button class="btn btn-outline-success" (click)="LogOut()"type="submit">Logout</button>
           </div>
         </div>
-      </nav>
-        
+      </nav> -->
+       <app-managernav></app-managernav> 
     </header>
 
+  <br>
+  <br>
   <br>
   <br>
 <div class="container ">
