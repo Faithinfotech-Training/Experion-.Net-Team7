@@ -11,6 +11,10 @@ namespace TrainingAcademyManagmentSystem.Repository
         //get all courses
         Task<List<Courses>> GetCourses();
 
+
+        //get all courses which are available and public
+        Task<List<Courses>> GetCoursesAvailable();
+
         //get single course by id
         Task<Courses> GetCourse(int id);
 

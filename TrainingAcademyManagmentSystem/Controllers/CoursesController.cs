@@ -36,6 +36,22 @@ namespace TrainingAcademyManagmentSystem.Controllers
         }
 
         #endregion
+        //get all courses which are public and available
+        #region get all courses which are public and available
+        [HttpGet]
+        [Route("getavailable")]
+        public async Task<IActionResult> GetCoursesAvailable()
+        {
+            var courses = await courseRepo.GetCoursesAvailable();
+            Console.WriteLine(courses);
+            if (courses == null)
+            {
+                return NotFound();
+            }
+            return Ok(courses);
+        }
+
+        #endregion
 
         //get course by id
         #region single course

@@ -88,6 +88,30 @@ namespace TrainingAcademyManagmentSystem.Repository
             
             return null;
         }
+
+        public async Task<List<Resource>> GetResourceAvailable()
+        {
+            //get resourse details which are public and avialble
+            if (db != null)
+            {
+                return await (from r in db.Resource
+                              where r.IsPublic==true&&r.IsAvailable==true
+                              select new Resource
+                              {
+                                  ResourceId=r.ResourceId,
+                                  ResourceName = r.ResourceName,
+                                  ResourceCost = r.ResourceCost,
+                                  ResourceDescription = r.ResourceDescription,
+                                  IsAvailable = r.IsAvailable,
+                                  IsPublic=r.IsPublic
+                                
+
+                              }
+
+                              ).ToListAsync();
+            }
+            return null;
+        }
         #endregion
     }
 }

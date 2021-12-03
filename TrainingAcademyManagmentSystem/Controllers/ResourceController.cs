@@ -121,6 +121,28 @@ namespace TrainingAcademyManagmentSystem.Controllers
         }
         #endregion
 
+        #region get resource details which are public and available
+        [HttpGet]
+        [Route("GetAvailableResources")]
+        public async Task<IActionResult> GetAvailableResources()
+        {
+            try
+            {
+                var exp = await resourceRepository.GetResourceAvailable();
+                if (exp == null)
+                {
+                    return NotFound();
+                }
+                return Ok(exp);
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+
+        }
+        #endregion
+
         #region get resource by id
         [HttpGet]
         [Route("GetResourceById")]
