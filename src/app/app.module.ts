@@ -39,6 +39,8 @@ import{PageVisitService}from'./shared/page-visit.service';
 import { PagevisitComponent } from './pagevisit/pagevisit.component';
 import { UsercourselistComponent } from './usercourselist/usercourselist.component';
 import { UserresourcelistComponent } from './userresourcelist/userresourcelist.component';
+import { HomeComponent } from './home/home.component';
+import { UserNavComponent } from './user-nav/user-nav.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,7 +66,9 @@ import { UserresourcelistComponent } from './userresourcelist/userresourcelist.c
     EditCoursePipelineComponent,
     PagevisitComponent,
     UsercourselistComponent,
-    UserresourcelistComponent
+    UserresourcelistComponent,
+    HomeComponent,
+    UserNavComponent
     
   ],
   imports: [

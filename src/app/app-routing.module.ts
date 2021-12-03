@@ -24,6 +24,7 @@ import { EditCoursePipelineComponent } from './edit-course-pipeline/edit-course-
 import { PagevisitComponent } from './pagevisit/pagevisit.component';
 import { UsercourselistComponent } from './usercourselist/usercourselist.component';
 import { UserresourcelistComponent } from './userresourcelist/userresourcelist.component';
+import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   { path: '', component: LoginComponent },
   {path: 'resources',  component:ResourcesComponent},
@@ -53,7 +54,8 @@ const routes: Routes = [
   { path: 'editcpipeline/:id', component: EditCoursePipelineComponent },
   { path: 'pagevisit', component: PagevisitComponent },
   {path:'usercourselist',component:UsercourselistComponent},
-  {path:'userresourcelist',component:UserresourcelistComponent}
+  {path:'userresourcelist',component:UserresourcelistComponent},
+  { path: 'home', component: HomeComponent }
 
 ];
 
