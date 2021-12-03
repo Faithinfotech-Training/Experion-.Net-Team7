@@ -185,5 +185,51 @@ namespace TrainingAcademyManagmentSystem.Controllers
         }
 
         #endregion
+
+        #region Get all Resource Count
+        [HttpGet]
+        [Route("EnquiryCount")]
+        public async Task<IActionResult> GetResourceCount()
+        {
+            try
+            {
+                var query = await this.resourceEnquiry.GetResourceCount();
+
+                if (query == null)
+                {
+                    return NotFound();
+                }
+                return Ok(query);
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
+
+        #endregion
+
+        #region Get all  details by Resource  id
+        [HttpGet]
+        [Route("EnquiryReportByResourceId")]
+        public async Task<IActionResult> GetSummaryByResourceId(int id)
+        {
+            try
+            {
+                var details = await resourceEnquiry.GetSummaryByResourceId(id);
+
+                if (details == null)
+                {
+                    return NotFound();
+                }
+                return Ok(details);
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
+
+        #endregion
     }
 }

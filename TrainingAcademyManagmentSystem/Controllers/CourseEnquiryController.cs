@@ -164,7 +164,7 @@ namespace TrainingAcademyManagmentSystem.Controllers
 
         #endregion
 
-        #region Get all enquiry details by id
+        #region Get all enquiry details by course enquiry id
         [HttpGet]
         [Route("EnquiryReportById")]
         public async Task<IActionResult> GetCourseEnquiryReportById(int id)
@@ -186,5 +186,52 @@ namespace TrainingAcademyManagmentSystem.Controllers
         }
 
         #endregion
+
+        #region Get all Course Count
+        [HttpGet]
+        [Route("EnquiryCount")]
+        public async Task<IActionResult> GetCourseCount()
+        {
+            try
+            {
+                var query = await this.courseEnquiry.GetCourseCount();
+
+                if (query == null)
+                {
+                    return NotFound();
+                }
+                return Ok(query);
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
+
+        #endregion
+
+        #region Get all  details by course  id
+        [HttpGet]
+        [Route("EnquiryReportByCourseId")]
+        public async Task<IActionResult> GetSummaryByCourseId(int id)
+        {
+            try
+            {
+                var details = await courseEnquiry.GetSummaryByCourseId(id);
+
+                if (details == null)
+                {
+                    return NotFound();
+                }
+                return Ok(details);
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
+
+        #endregion
+
     }
 }

@@ -44,6 +44,24 @@ namespace TrainingAcademyManagmentSystem.Repository
             return enquiry.ResourceEnquiryId;
         }
 
+        //get resource count
+        public async Task<List<ResourceCountModel>> GetResourceCount()
+        {
+            return await (from re in db.ResourceEnquiry
+                          join r in db.Resource on re.ResourceId equals r.ResourceId
+                          group re by new { re.ResourceId, r.ResourceName } into grp
+
+                          select new ResourceCountModel
+                          {
+                              ResourceId = (int)grp.Key.ResourceId,
+                              ResourceName = grp.Key.ResourceName,
+                              ResourceCount = grp.Count()
+
+
+                          }
+            ).ToListAsync();
+        }
+
 
         //get resource enquiry
         public async Task<List<ResourceEnquiry>> GetResourceEnquiry()
@@ -130,6 +148,46 @@ namespace TrainingAcademyManagmentSystem.Repository
                               }
 
                               ).ToListAsync();
+            }
+            return null;
+        }
+
+        //get details by resource id
+        public async Task<List<ResourceEnquiryModel>> GetSummaryByResourceId(int id)
+        {
+            //get details from lead and resource enquiry table using linq
+            if (db != null)
+            {
+                return await (from re in db.ResourceEnquiry
+                              join l in db.Lead on re.LeadId equals l.LeadId
+                              join r in db.Resource on re.ResourceId equals r.ResourceId
+                              where r.ResourceId == id
+                              select new ResourceEnquiryModel
+                              {
+                                  ResourceEnquiryId = re.ResourceEnquiryId,
+                                  LeadId = l.LeadId,
+                                  LeadName = l.LeadName,
+                                  LeadContact = l.LeadContact,
+                                  LeadEmail = l.LeadEmail,
+                                  LeadStatus = l.LeadStatus,
+                                  ResourceId = r.ResourceId,
+                                  ResourceName = r.ResourceName,
+                                  ResourceCost = r.ResourceCost,
+                                  ResourceDescription = r.ResourceDescription,
+                                  IsAvailable = r.IsAvailable,
+                                  Query = re.Query,
+                                  EnquiryDate = re.EnquiryDate
+
+                              }
+
+              ).ToListAsync();
+
+
+
+
+
+
+
             }
             return null;
         }

@@ -34,6 +34,13 @@ namespace TrainingAcademyManagmentSystem.Repository
         //get all resource enquiry details by id 
         public Task<List<ResourceEnquiryModel>> GetresourceEnquiryReportById(int id);
 
+        //get details by resource id
+        public Task<List<ResourceEnquiryModel>> GetSummaryByResourceId(int id);
+
+
+        //get resource count 
+        public Task<List<ResourceCountModel>> GetResourceCount();
+
 
 
 
