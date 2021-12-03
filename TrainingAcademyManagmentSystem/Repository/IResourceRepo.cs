@@ -10,6 +10,9 @@ namespace TrainingAcademyManagmentSystem.Repository
     {
         Task<List<Resource>> GetResources();
 
+        //get all resourse which are available and public
+        Task<List<Resource>> GetResourceAvailable();
+
         Task<Resource> AddResource(Resource resource);
 
         Task<Resource> DeleteResource(int id);

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TrainingAcademyManagmentSystem.Models;
+using TrainingAcademyManagmentSystem.ViewModel;
 
 namespace TrainingAcademyManagmentSystem.Repository
 {
@@ -82,11 +83,9 @@ namespace TrainingAcademyManagmentSystem.Repository
                                   LeadId=l.LeadId,
                                   LeadName=l.LeadName,
                                   LeadContact=l.LeadContact,
-                                  LeadId=l.LeadId,
                                   ResourceId=r.ResourceId,
                                   LeadEmail=l.LeadEmail,
                                   LeadStatus=l.LeadStatus,
-                                  ResourceId=r.ResourceId,
                                   ResourceName=r.ResourceName,
                                   ResourceCost=r.ResourceCost,
                                   ResourceDescription=r.ResourceDescription,
