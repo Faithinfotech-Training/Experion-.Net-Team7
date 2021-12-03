@@ -37,6 +37,12 @@ import { EditCoursePipelineComponent } from './edit-course-pipeline/edit-course-
 import { CoursePipelineService} from './shared/course-pipeline.service';
 import{PageVisitService}from'./shared/page-visit.service';
 import { PagevisitComponent } from './pagevisit/pagevisit.component';
+import { CourseEnquiryCountComponent } from './course-enquiry-count/course-enquiry-count.component';
+import { ResourceEnquiryCountComponent } from './resource-enquiry-count/resource-enquiry-count.component';
+import { UsercourselistComponent } from './usercourselist/usercourselist.component';
+import { UserresourcelistComponent } from './userresourcelist/userresourcelist.component';
+import { HomeComponent } from './home/home.component';
+import { UserNavComponent } from './user-nav/user-nav.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,7 +66,13 @@ import { PagevisitComponent } from './pagevisit/pagevisit.component';
     CourseEnquiryReportComponent,
     CoursePipelineComponent,
     EditCoursePipelineComponent,
-    PagevisitComponent
+    PagevisitComponent,
+    CourseEnquiryCountComponent,
+    ResourceEnquiryCountComponent,
+    UsercourselistComponent,
+    UserresourcelistComponent,
+    HomeComponent,
+    UserNavComponent
     
   ],
   imports: [

@@ -65,7 +65,7 @@
           <td> {{enq.LeadStatus}} </td>
           <td> {{enq.CourseName}} </td>
           <td> {{enq.Query}} </td>
-          <td> {{enq.EnquiryDate}} </td>
+          <td> {{enq.EnquiryDate|date:'dd-MM-yyyy'}} </td>
           <td> <a routerLink='/editcpipeline/{{enq.LeadId}}'> Update </a> </td>
         </tr>
       </tbody>

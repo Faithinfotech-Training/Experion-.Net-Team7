@@ -65,7 +65,7 @@
           <td> {{enq.LeadStatus}} </td>
           <td> {{enq.ResourceName}} </td>
           <td> {{enq.Query}} </td>
-          <td> {{enq.EnquiryDate}} </td>
+          <td> {{enq.EnquiryDate|date:'dd-MM-yyyy'}} </td>
           <td> <a routerLink='/editrpipeline/{{enq.LeadId}}'> Update </a> </td>
         </tr>
       </tbody>

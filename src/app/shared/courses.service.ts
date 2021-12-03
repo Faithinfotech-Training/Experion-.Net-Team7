@@ -12,6 +12,7 @@ export class CoursesService {
   //instance 
   formData: Courses = new Courses();
   courses: Courses[];
+  availableCourses:Courses[];
 
   constructor(private http: HttpClient) { }
 
@@ -25,6 +26,13 @@ export class CoursesService {
     this.http.get(environment.apiUrl+ "api/courses")
     .toPromise().then(res=>
       this.courses = res as Courses[]);
+  }
+
+  //get courses which are available and public
+  getAvailableCourses(){
+    this.http.get(environment.apiUrl+ "api/courses/getavailable")
+    .toPromise().then(res=>
+      this.availableCourses = res as Courses[]);
   }
 
   //update course

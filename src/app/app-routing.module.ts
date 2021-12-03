@@ -22,6 +22,11 @@ import { CourseEnquiryReportComponent } from './course-enquiry-report/course-enq
 import { CoursePipelineComponent } from './course-pipeline/course-pipeline.component';
 import { EditCoursePipelineComponent } from './edit-course-pipeline/edit-course-pipeline.component';
 import { PagevisitComponent } from './pagevisit/pagevisit.component';
+import { CourseEnquiryCountComponent } from './course-enquiry-count/course-enquiry-count.component';
+import { ResourceEnquiryCountComponent } from './resource-enquiry-count/resource-enquiry-count.component';
+import { UsercourselistComponent } from './usercourselist/usercourselist.component';
+import { UserresourcelistComponent } from './userresourcelist/userresourcelist.component';
+import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   { path: '', component: LoginComponent },
   {path: 'resources',  component:ResourcesComponent},
@@ -41,15 +46,20 @@ const routes: Routes = [
   {path:'resourcepipeline',component:ResourcePipelineComponent},
   {path:'editrpipeline/:id',component:EditResourcePipelineComponent},
   {path: 'courseenquiry/:CourseId',component: CourseEnquiryComponent},
+  {path: 'courseenquirycount',component: CourseEnquiryCountComponent},
+  {path: 'resourceenquirycount',component: ResourceEnquiryCountComponent},
   {path:'lead/:leadId',component:LeadComponent},
-  { path: 'resourcesummary', component: ResourceSummaryComponent },
-  { path: 'courseenquirysummary', component: CourseEnquirySummaryComponent },
+  { path: 'resourcesummary/:ResourceId', component: ResourceSummaryComponent },
+  { path: 'courseenquirysummary/:CourseId', component: CourseEnquirySummaryComponent },
   { path: 'resourceenquiryreport/:ResourceEnquiryId', component: ResourceEnquiryReportComponent },
   { path: 'courseenquiryreport/:CourseEnquiryId', component: CourseEnquiryReportComponent },
   { path: 'courseenquiry/:CourseId', component: CourseEnquiryComponent },
   { path: 'coursepipeline', component: CoursePipelineComponent },
   { path: 'editcpipeline/:id', component: EditCoursePipelineComponent },
-  { path: 'pagevisit', component: PagevisitComponent }
+  { path: 'pagevisit', component: PagevisitComponent },
+  {path:'usercourselist',component:UsercourselistComponent},
+  {path:'userresourcelist',component:UserresourcelistComponent},
+  { path: 'home', component: HomeComponent }
 
 ];
 

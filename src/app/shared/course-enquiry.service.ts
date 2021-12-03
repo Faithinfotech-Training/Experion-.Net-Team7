@@ -4,14 +4,17 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { CourseEnquiry } from './course-enquiry';
 import { Courses } from './courses';
-import {CourseEnquiryModel} from './course-enquiry-model'
+import { CourseEnquiryModel } from './course-enquiry-model';
+import { CourseEnquiryCount } from './course-enquiry-count'
 
 @Injectable({
   providedIn: 'root'
 })
 export class CourseEnquiryService {
-  courseEnquiryModel:CourseEnquiryModel[];
-  enquirydetails:CourseEnquiryModel[];
+  courseEnquiryModel: CourseEnquiryModel[];
+  enquirydetails: CourseEnquiryModel[];
+  courseEnquiryCount: CourseEnquiryCount[];
+
   formData: CourseEnquiry = new CourseEnquiry();
 
   constructor(private httpclient: HttpClient) { }
@@ -21,16 +24,30 @@ export class CourseEnquiryService {
     return this.httpclient.post(environment.apiUrl + "api/CourseEnquiry", courseEnquiry);
   }
 
-    //bind viewmodel of course enquiry
-    bindCourseEnquiry(){
-      this.httpclient.get(environment.apiUrl+"api/CourseEnquiry/EnquiryReport")
-      .toPromise().then(response=>
-        this.courseEnquiryModel=response as CourseEnquiryModel[])
-    }
-  
-    // get view model by resource enquiry id 
-    bindCourseEnquiryById(CourseEnquiryId:number):Observable<any>
-    {
-      return this.httpclient.get(environment.apiUrl+"api/CourseEnquiry/EnquiryReportById?id="+CourseEnquiryId);
-    }
+  //bind viewmodel of course enquiry
+  bindCourseEnquiry() {
+    this.httpclient.get(environment.apiUrl + "api/CourseEnquiry/EnquiryReport")
+      .toPromise().then(response =>
+        this.courseEnquiryModel = response as CourseEnquiryModel[])
+  }
+
+  // get view model by course enquiry id 
+  bindCourseEnquiryById(CourseEnquiryId: number): Observable<any> {
+    return this.httpclient.get(environment.apiUrl + "api/CourseEnquiry/EnquiryReportById?id=" + CourseEnquiryId);
+  }
+
+  //get details by course id
+  bindCourseEnquiryByCourseId(CourseId: number): Observable<any> {
+    return this.httpclient.get(environment.apiUrl + "api/CourseEnquiry/EnquiryReportByCourseId?id=" + CourseId);
+  }
+
+
+  //get course enquiry count 
+  bindCourseEnquiryCount() {
+    this.httpclient.get(environment.apiUrl + "api/CourseEnquiry/EnquiryCount")
+      .toPromise().then(response =>
+        this.courseEnquiryCount = response as CourseEnquiryCount[]);
+        
+  }
+
 }

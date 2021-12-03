@@ -22,7 +22,7 @@ export class CourseEnquiryReportComponent implements OnInit {
     console.log(this.CourseEnquiryId);
 
     if (this.CourseEnquiryId != 0 && this.CourseEnquiryId != null && this.CourseEnquiryId != undefined) {
-      //get resourceenquiry
+      //get courseenquiry
       this.courseEnquiryService.bindCourseEnquiryById(this.CourseEnquiryId).subscribe(
         (data) => {
           console.log(data);
