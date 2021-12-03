@@ -35,6 +35,33 @@ namespace TrainingAcademyManagmentSystem.Repository
             return null;
         }
 
+
+        //get all course which are available and public
+        public async Task<List<Courses>> GetCoursesAvailable()
+        {
+            if (db != null)
+            {
+                return await (from r in db.Courses
+                              where r.IsAvailable==true
+                              && r.IsPublic==true
+                              
+                              select new Courses
+                              {
+                                 
+                                  CourseId = r.CourseId,
+                                  CourseName = r.CourseName,
+                                  CoursePrice = r.CoursePrice,
+                                  CourseDescription = r.CourseDescription,
+                                  IsAvailable = r.IsAvailable,
+                                  IsPublic = r.IsPublic,
+                                 
+
+                              }
+
+                              ).ToListAsync();
+            }
+            return null;
+        }
         //add course
         public async Task<Courses> AddCourse(Courses course)
         {
@@ -72,5 +99,7 @@ namespace TrainingAcademyManagmentSystem.Repository
             }
             return null;
         }
+
+      
     }
 }

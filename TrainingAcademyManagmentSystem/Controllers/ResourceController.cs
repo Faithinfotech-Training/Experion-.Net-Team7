@@ -50,7 +50,7 @@ namespace TrainingAcademyManagmentSystem.Controllers
         #endregion
 
         #region delete resource
-        [HttpDelete("{id}")]
+        [HttpDelete]
         [Route("DeleteResource")]
         public async Task<IActionResult> DeleteResource(int id)
         {
@@ -107,6 +107,28 @@ namespace TrainingAcademyManagmentSystem.Controllers
             try
             {
                 var exp = await resourceRepository.GetResources();
+                if (exp == null)
+                {
+                    return NotFound();
+                }
+                return Ok(exp);
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+
+        }
+        #endregion
+
+        #region get resource details which are public and available
+        [HttpGet]
+        [Route("GetAvailableResources")]
+        public async Task<IActionResult> GetAvailableResources()
+        {
+            try
+            {
+                var exp = await resourceRepository.GetResourceAvailable();
                 if (exp == null)
                 {
                     return NotFound();
