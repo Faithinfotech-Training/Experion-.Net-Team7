@@ -1,0 +1,23 @@
+<br>
+
+<div class="container">
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let course of service.availableCourses">
+      <div class="card h-100 shadow p-3 mb-5 bg-white rounded">
+        <img src="https://static.naukimg.com/s/7/1290/i/homepage-banner.f33d0942.png"
+        class="card-img-top" alt="...">
+        <div class="card-body">
+            <hr>
+          <h5 class="card-title">{{course.CourseName|uppercase}}</h5>
+          <br>
+        
+          <p class="card-text">{{course.CourseDescription}}</p>
+          
+          <hr>
+          <p class="card-text" >Price: {{course.CoursePrice}}</p>
+          <button class="btn btn-primary btn-sm float-right" (click)="onEnquiry(course.CourseId)">Inquire</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

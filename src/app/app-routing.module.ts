@@ -24,6 +24,9 @@ import { EditCoursePipelineComponent } from './edit-course-pipeline/edit-course-
 import { PagevisitComponent } from './pagevisit/pagevisit.component';
 import { CourseEnquiryCountComponent } from './course-enquiry-count/course-enquiry-count.component';
 import { ResourceEnquiryCountComponent } from './resource-enquiry-count/resource-enquiry-count.component';
+import { UsercourselistComponent } from './usercourselist/usercourselist.component';
+import { UserresourcelistComponent } from './userresourcelist/userresourcelist.component';
+import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   { path: '', component: LoginComponent },
   {path: 'resources',  component:ResourcesComponent},
@@ -53,7 +56,10 @@ const routes: Routes = [
   { path: 'courseenquiry/:CourseId', component: CourseEnquiryComponent },
   { path: 'coursepipeline', component: CoursePipelineComponent },
   { path: 'editcpipeline/:id', component: EditCoursePipelineComponent },
-  { path: 'pagevisit', component: PagevisitComponent }
+  { path: 'pagevisit', component: PagevisitComponent },
+  {path:'usercourselist',component:UsercourselistComponent},
+  {path:'userresourcelist',component:UserresourcelistComponent},
+  { path: 'home', component: HomeComponent }
 
 ];
 
