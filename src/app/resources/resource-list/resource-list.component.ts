@@ -36,9 +36,7 @@ export class ResourceListComponent implements OnInit {
           console.log(result);
           this.resourceService.bindResource();
 
-          // this.toastrService.success("Inserted employee..","EmpApp v2021")
-          //this.toxterService.success('Insert!', 'succes!');
-          //this.empService.bindEmployee();
+      
         },
         (error) => {
           console.log(error);

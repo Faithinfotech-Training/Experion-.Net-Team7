@@ -1,3 +1,8 @@
 .own{
     margin-top: 2%;
 }
+.table-bordered{
+    border-radius: 50px;
+    border-color: black;
+    border-width: 10px;
+}

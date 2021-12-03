@@ -1,9 +1,9 @@
-h5{
+h3{
     
-    font-family: 'Courier New', monospace;
+    font-family:"Raleway",sans-serif;
     font-weight: bold;
     text-align: center;
-    font-size: 55px;
+    font-size: 28px;
 }
 
 .container{
@@ -15,7 +15,7 @@ h5{
     border:none;
     outline:none;
     font-size:16px;
-    background:rgb(3, 245, 51);
+    background:rgb(0, 0, 0);
     color:#000000;
     border-radius:10px;
     cursor:pointer;
