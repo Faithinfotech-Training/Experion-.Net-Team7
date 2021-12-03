@@ -21,7 +21,7 @@
 
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle active" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Equiry Summary
+                  Enquiry Summary
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                   <li><a class="dropdown-item" href="resourcesummary">Resources</a></li>
@@ -69,11 +69,13 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let res of resourceEnquiryService.resourceEnquiryModel| filter:filter | paginate: {itemsPerPage:6, currentPage:page}" >
+            <tr *ngFor="let res of resourceEnquiryService.enquirydetails| filter:filter | paginate: {itemsPerPage:6, currentPage:page} " >
+              
                 <td>{{res.ResourceEnquiryId}}</td>
                 <td >{{res.LeadName}}</td>
                 <td >{{res.ResourceName}}</td>
                 <td>{{res.LeadStatus}}</td>
+                
                 <td>
                     <button class="btn btn-info btn-sm" (click)="viewDetails(res.ResourceEnquiryId)">View Details</button>
                 </td>

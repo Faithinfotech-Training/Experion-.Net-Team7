@@ -3,6 +3,6 @@ export class Lead {
     LeadName:string;
     LeadContact:number;
     LeadEmail:string;
-    LeadStatus:string='lead';
+    LeadStatus:string='Pending';
     LeadQualification:string;
 }
