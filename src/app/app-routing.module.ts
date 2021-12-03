@@ -22,6 +22,7 @@ import { CourseEnquiryReportComponent } from './course-enquiry-report/course-enq
 import { CoursePipelineComponent } from './course-pipeline/course-pipeline.component';
 import { EditCoursePipelineComponent } from './edit-course-pipeline/edit-course-pipeline.component';
 import { PagevisitComponent } from './pagevisit/pagevisit.component';
+import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   { path: '', component: LoginComponent },
   {path: 'resources',  component:ResourcesComponent},
@@ -49,7 +50,8 @@ const routes: Routes = [
   { path: 'courseenquiry/:CourseId', component: CourseEnquiryComponent },
   { path: 'coursepipeline', component: CoursePipelineComponent },
   { path: 'editcpipeline/:id', component: EditCoursePipelineComponent },
-  { path: 'pagevisit', component: PagevisitComponent }
+  { path: 'pagevisit', component: PagevisitComponent },
+  { path: 'home', component: HomeComponent }
 
 ];
 

@@ -102,7 +102,7 @@
         </div>
         <br>
         
-        <a  [routerLink]="['resource']" class="btn btn-success" style="float: right;margin-bottom:10px;" >Add Resource</a>
+        <a  [routerLink]="['resource']" class="btn btn-success" style="float: right;margin-bottom:10px;" *ngIf=this.IsAdmin()>Add Resource</a>
     </div>
     
     <table class="table table-bordered table-striped">
@@ -124,7 +124,7 @@
                 <td (click)="populateForm(res)">{{res.ResourceCost}}</td>
                 <td (click)="populateForm(res)">{{res.IsPublic}}</td>
                 <td (click)="populateForm(res)">{{res.IsAvailable}}</td>
-                <td>
+                <td *ngIf=this.IsAdmin()>
                     <button class="btn btn-sm  btn-outline-danger" (click)="deleteResource(res.ResourceId)">Delete</button>&nbsp;
                     <button class="btn btn-sm btn-info" (click)="updateResource(res.ResourceId)">Edit</button>
                 </td>
