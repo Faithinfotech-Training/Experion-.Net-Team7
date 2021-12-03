@@ -50,7 +50,7 @@ namespace TrainingAcademyManagmentSystem.Controllers
         #endregion
 
         #region delete resource
-        [HttpDelete("{id}")]
+        [HttpDelete]
         [Route("DeleteResource")]
         public async Task<IActionResult> DeleteResource(int id)
         {

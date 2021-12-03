@@ -31,7 +31,12 @@ namespace TrainingAcademyManagmentSystem.Repository
         //get course enquiry details by course enquiry id
         public Task<List<CourseEquiryModel>> GetCourseEnquiryReportById(int id);
 
+        //get details by course id
+        public Task<List<CourseEquiryModel>> GetSummaryByCourseId(int id);
 
+
+        //get course count details 
+        public Task<List<CourseCountModel>> GetCourseCount();
 
 
 

@@ -22,7 +22,7 @@ namespace TrainingAcademyManagmentSystem.ViewModel
         public decimal CoursePrice { get; set; }
         public string CourseDescription { get; set; }
 
-
+        
         public int CourseEnquiryId { get; set; }
         public string Query { get; set; }
         public DateTime? EnquiryDate { get; set; }

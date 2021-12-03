@@ -18,8 +18,6 @@ using System.Threading.Tasks;
 using TrainingAcademyManagmentSystem.Repository;
 using TrainingAcademyManagmentSystem.Models;
 
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-
 namespace TrainingAcademyManagmentSystem
 {
     public class Startup
@@ -36,7 +34,7 @@ namespace TrainingAcademyManagmentSystem
         {
             services.AddControllers();
             services.AddDbContext<TrainingManagmentSystemContext>(
-                          item => item.UseSqlServer(Configuration.GetConnectionString("ConStr"))
+                          item => item.UseSqlServer(Configuration.GetConnectionString("Connection"))
                           );
 
             services.AddScoped<IUserRepo, UserRepo>();
