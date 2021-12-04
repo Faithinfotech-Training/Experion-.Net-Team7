@@ -1,6 +1,6 @@
 
 <header *ngIf=this.IsAdmin()>
-    
+    <!--
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand text-success " href="/admin">GEO INFOTECH</a>
@@ -38,13 +38,13 @@
             <button class="btn btn-outline-success" (click)="LogOut()"type="submit">Logout</button>
         </div>
       </div>
-    </nav>
-      
+    </nav>-->
+      <app-adminnav></app-adminnav>
   </header>
 
 
   <header *ngIf=this.IsManager()>
-    
+    <!--
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand text-success " href="manager">GEO INFOTECH</a>
@@ -83,7 +83,8 @@
           </div>
         </div>
       </nav>
-        
+    -->
+    <app-managernav></app-managernav>
     </header>
 
   <br>
@@ -96,7 +97,7 @@
     <form class="row g-3" #form="ngForm" (ngSubmit)="insertCourse(form)" autocomplete="off">
         <div class="col-md-6">
           <label for="courseName" class="form-label"> Course Name </label>
-          <input type="text" class="form-control" id="inputEmail4"  name="CourseName" #CourseName="ngModel" 
+          <input type="text" class="form-control" id="inputEmail4"  name="CourseName" #CourseName="ngModel"  autocomplete="off"
           [(ngModel)]="service.formData.CourseName" required [ngClass]="{ 'is-invalid': CourseName.touched && CourseName.invalid}">
           <div class="validation-error" *ngIf="CourseName.touched && CourseName.invalid">
             <div *ngIf="CourseName.errors.required">Name is required</div>
@@ -104,7 +105,7 @@
         </div>
         <div class="col-md-6">
           <label for="price" class="form-label"> Price </label>
-          <input type="text" class="form-control" id="inputPassword4" name="CoursePrice" #CoursePrice="ngModel" maxlength="6" pattern="[0-9]+"
+          <input type="text" class="form-control" id="inputPassword4" autocomplete="off" name="CoursePrice" #CoursePrice="ngModel" maxlength="6" pattern="[0-9]+"
           [(ngModel)]="service.formData.CoursePrice" required [ngClass]="{ 'is-invalid': CoursePrice.touched && CoursePrice.invalid}">
           <div class="validation-error" *ngIf="CoursePrice.touched && CoursePrice.invalid">
             <div *ngIf="CoursePrice.errors.required  && CoursePrice.errors"> Price is required in number format</div>
@@ -112,7 +113,7 @@
         </div>
         <div class="col-12">
           <label for="Description" class="form-label"> Description </label>
-          <input type="text" class="form-control" id="inputAddress" name="CourseDescription" #CourseDescription="ngModel" 
+          <input type="text" class="form-control" id="inputAddress" name="CourseDescription" #CourseDescription="ngModel" autocomplete="off"
           [(ngModel)]="service.formData.CourseDescription">
         </div>
 
