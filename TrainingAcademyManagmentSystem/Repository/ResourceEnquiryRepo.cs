@@ -44,6 +44,26 @@ namespace TrainingAcademyManagmentSystem.Repository
             return enquiry.ResourceEnquiryId;
         }
 
+        //get enquiry summary by Enquiry date
+        public async Task<List<ResourceCountModel>> GetResourceByDate(DateTime date)
+        {
+            return await(from re in db.ResourceEnquiry
+                         join r in db.Resource on re.ResourceId equals r.ResourceId
+                         where re.EnquiryDate>date
+                         group re by new { re.ResourceId, r.ResourceName,re.EnquiryDate } into grp
+
+                         select new ResourceCountModel
+                         {
+                             ResourceId = (int)grp.Key.ResourceId,
+                             ResourceName = grp.Key.ResourceName,
+                             EnquiryDate=grp.Key.EnquiryDate,
+                             ResourceCount = grp.Count()
+
+
+                         }
+).ToListAsync();
+        }
+
         //get resource count
         public async Task<List<ResourceCountModel>> GetResourceCount()
         {

@@ -34,7 +34,7 @@ namespace TrainingAcademyManagmentSystem
         {
             services.AddControllers();
             services.AddDbContext<TrainingManagmentSystemContext>(
-                          item => item.UseSqlServer(Configuration.GetConnectionString("Connection"))
+                          item => item.UseSqlServer(Configuration.GetConnectionString("ConStr"))
                           );
 
             services.AddScoped<IUserRepo, UserRepo>();

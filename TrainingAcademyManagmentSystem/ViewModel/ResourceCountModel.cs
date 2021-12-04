@@ -10,6 +10,7 @@ namespace TrainingAcademyManagmentSystem.ViewModel
         public int ResourceCount { get; set; }
         public int ResourceId { get; set; }
 
+        public DateTime? EnquiryDate { get; set; }
         public string ResourceName { get; set; }
     }
 }

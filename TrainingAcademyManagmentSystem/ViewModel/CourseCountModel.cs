@@ -10,6 +10,7 @@ namespace TrainingAcademyManagmentSystem.ViewModel
         public int CourseCount { get; set; }
         public int CourseId { get; set; }
 
+        public DateTime? EnquiryDate { get; set; }
         public string CourseName { get; set; }
     }
 }
