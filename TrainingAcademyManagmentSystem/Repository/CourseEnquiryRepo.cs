@@ -42,6 +42,26 @@ namespace TrainingAcademyManagmentSystem.Repository
             return enquiry.CourseEnquiryId;
         }
 
+
+        //Get course by date 
+        public async Task<List<CourseCountModel>> GetCourseByDate(DateTime date)
+        {
+            return await(from ce in db.CourseEnquiry
+                         join c in db.Courses on ce.CourseId equals c.CourseId
+                         where ce.EnquiryDate>date
+                         group ce by new { ce.CourseId, c.CourseName,ce.EnquiryDate } into grp
+
+
+                         select new CourseCountModel
+                         {
+                             CourseId = (int)grp.Key.CourseId,
+                             CourseName = grp.Key.CourseName,
+                             EnquiryDate=grp.Key.EnquiryDate,
+                             CourseCount = grp.Count()
+                         }
+            ).ToListAsync();
+        }
+
         //get course count;
         public  async Task<List<CourseCountModel>> GetCourseCount()
         {

@@ -37,9 +37,11 @@ namespace TrainingAcademyManagmentSystem.Repository
         //get details by resource id
         public Task<List<ResourceEnquiryModel>> GetSummaryByResourceId(int id);
 
-
         //get resource count 
         public Task<List<ResourceCountModel>> GetResourceCount();
+
+        //get summary by date  
+        public Task<List<ResourceCountModel>> GetResourceByDate(DateTime date);
 
 
 

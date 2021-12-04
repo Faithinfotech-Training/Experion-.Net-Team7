@@ -210,6 +210,29 @@ namespace TrainingAcademyManagmentSystem.Controllers
 
         #endregion
 
+        #region Sort Course Count by Date
+        [HttpGet]
+        [Route("EnquiryCountByDate")]
+        public async Task<IActionResult> GetCourseByDate(DateTime date)
+        {
+            try
+            {
+                var query = await this.courseEnquiry.GetCourseByDate(date);
+
+                if (query == null)
+                {
+                    return NotFound();
+                }
+                return Ok(query);
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
+
+        #endregion
+
         #region Get all  details by course  id
         [HttpGet]
         [Route("EnquiryReportByCourseId")]

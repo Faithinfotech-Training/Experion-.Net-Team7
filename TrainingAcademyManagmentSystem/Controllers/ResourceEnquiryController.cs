@@ -231,5 +231,27 @@ namespace TrainingAcademyManagmentSystem.Controllers
         }
 
         #endregion
+
+        #region Get Enquiry details and count by date
+        [HttpGet]
+        [Route("EnquiryCountByDate")]
+        public async Task<IActionResult> GetResourceByDate(DateTime date)
+        {
+            try
+            {
+                var query = await this.resourceEnquiry.GetResourceByDate(date);
+                if (query == null)
+                {
+                    return NotFound();
+                }
+                return Ok(query);
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
+
+        #endregion
     }
 }

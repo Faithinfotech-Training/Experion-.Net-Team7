@@ -38,6 +38,8 @@ namespace TrainingAcademyManagmentSystem.Repository
         //get course count details 
         public Task<List<CourseCountModel>> GetCourseCount();
 
+        //get summary by date  
+        public Task<List<CourseCountModel>> GetCourseByDate(DateTime date);
 
 
     }
