@@ -43,6 +43,8 @@ import { UsercourselistComponent } from './usercourselist/usercourselist.compone
 import { UserresourcelistComponent } from './userresourcelist/userresourcelist.component';
 import { HomeComponent } from './home/home.component';
 import { UserNavComponent } from './user-nav/user-nav.component';
+import { MailerService } from './shared/mailer.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -106,7 +108,8 @@ import { UserNavComponent } from './user-nav/user-nav.component';
       useClass:TokenInterceptor,
       multi:true
     },
-    CoursePipelineService 
+    CoursePipelineService,
+    MailerService 
   ],
   bootstrap: [AppComponent]
 })

@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../shared/auth.service';
 import { CoursePipelineService } from '../shared/course-pipeline.service';
+import { MailerService } from '../shared/mailer.service';
 
 @Component({
   selector: 'app-edit-course-pipeline',
@@ -14,7 +15,7 @@ export class EditCoursePipelineComponent implements OnInit {
   leadId: number;
 
   constructor( public service: CoursePipelineService, private authService:AuthService,private router: Router,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute, public mailerService: MailerService) { }
 
   ngOnInit(): void {
     this.leadId = this.route.snapshot.params['id'];
@@ -30,6 +31,12 @@ export class EditCoursePipelineComponent implements OnInit {
   //update
   updateLead(form?: NgForm) {
     console.log("Updating a record ...");
+    // console.log(form.value);
+    this.mailerService.sentMail(form.value).subscribe(
+      (res) => {
+        console.log(res);
+      }
+    );
     this.service.updateLead(form.value).subscribe(
       (res) => {
         console.log(res);
