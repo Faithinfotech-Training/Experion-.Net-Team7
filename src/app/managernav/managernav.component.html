@@ -1,0 +1,37 @@
+
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center">
+          <h1 class="logo me-auto"><a href="manager"> Geo Infotech </a></h1>
+          <!-- .navbar -->
+          <nav id="navbar" class="navbar order-last order-lg-0">
+            <ul>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink='/manager' href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" routerLink='/courses' href="#">Courses</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="#"  routerLink='/resourcelist'tabindex="-1" aria-disabled="true">Resources</a>
+                  </li>
+              
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Enquiry Summary
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                      <li><a class="dropdown-item" href="resourceenquirycount">Resources</a></li>
+                      <li><a class="dropdown-item" href="courseenquirycount">Courses</a></li>
+                      <li><a class="dropdown-item" href="chartReport">Report</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href=""  routerLink='/pagevisit'tabindex="-1" aria-disabled="true">Page Visit</a>
+                  </li>
+    
+              <li><a href="/login" (click)="LogOut()">Logout </a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav>
+        </div>
+      </header><!-- End Header -->

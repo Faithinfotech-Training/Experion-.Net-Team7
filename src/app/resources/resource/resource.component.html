@@ -1,179 +1,176 @@
 <header *ngIf=this.IsAdmin()>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand text-success " href="/admin">GEO INFOTECH</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
-        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link " aria-current="page" routerLink='/admin' href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " routerLink='/courses' href="#">Courses</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active " href="" routerLink='/resourcelist' tabindex="-1"
-              aria-disabled="true">Resources</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Enquiry
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-              <li><a class="dropdown-item" href="resourcepipeline">Resource Enquiry</a></li>
-              <li><a class="dropdown-item" href="coursepipeline">Course Enquiry</a></li>
-
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="" routerLink='/pagevisit' tabindex="-1" aria-disabled="true">Page Visit</a>
-          </li>
-        </ul>
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-success " href="/admin">GEO INFOTECH</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" routerLink='/admin' href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" routerLink='/courses' href="#">Courses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href=""  routerLink='/resourcelist'tabindex="-1" aria-disabled="true">Resources</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Enquiry
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="dropdown-item" href="resourcepipeline">Resource Enquiry</a></li>
+                <li><a class="dropdown-item" href="coursepipeline">Course Enquiry</a></li>
+                
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href=""  routerLink='/pagevisit'tabindex="-1" aria-disabled="true">Page Visit</a>
+            </li>
+          </ul>
         
-        <button class="btn btn-outline-success" (click)="LogOut()" type="submit">Logout</button>
+            <button class="btn btn-outline-success" (click)="LogOut()"type="submit">Logout</button>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav> -->
 
+  <app-adminnav></app-adminnav>
 </header>
 
 
 <header *ngIf=this.IsManager()>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand text-success " href="manager">GEO INFOTECH</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
-        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link " aria-current="page" routerLink='/manager' href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink='/courses' href="#">Courses</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#" routerLink='/resourcelist' tabindex="-1"
-              aria-disabled="true">Resources</a>
-          </li>
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand text-success " href="manager">GEO INFOTECH</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" routerLink='/manager' href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" routerLink='/courses' href="#">Courses</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="#"  routerLink='/resourcelist'tabindex="-1" aria-disabled="true">Resources</a>
+              </li>
+              
 
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Equiry Summary
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-              <li><a class="dropdown-item" href="resourcesummary">Resources</a></li>
-              <li><a class="dropdown-item" href="courseenquirysummary">Courses</a></li>
-
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Enquiry Summary
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="resourcesummary">Resources</a></li>
+                  <li><a class="dropdown-item" href="courseenquirysummary">Courses</a></li>
+                  
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href=""  routerLink='/pagevisit'tabindex="-1" aria-disabled="true">Page Visit</a>
+              </li>
             </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="" routerLink='/pagevisit' tabindex="-1" aria-disabled="true">Page Visit</a>
-          </li>
-        </ul>
-        
-        <button class="btn btn-outline-success" (click)="LogOut()" type="submit">Logout</button>
-      </div>
-    </div>
-  </nav>
-
-</header> <br>
+           
+              <button class="btn btn-outline-success" (click)="LogOut()"type="submit">Logout</button>
+          </div>
+        </div>
+      </nav> -->
+  <app-managernav></app-managernav>
+</header>
+<br>
 <br>
 
 <body>
   <div class="container">
-<h3>Add Resources</h3>
-<a (click)="goBack()" class="btn btn-success" style="float: right;margin-bottom:10px;">Resource List</a>
-<br>
-<div class="center">
-  <form name="resform" #form="ngForm" autocomplete="off" (ngSubmit)="onSubmit(form)">
+    <h3>Add Resources</h3>
+    <a (click)="goBack()" class="btn btn-success" style="float: right;margin-bottom:10px;">Resource List</a>
     <br>
-    <!--Resource idd-->
-    <input type="hidden" name="ResourceId" [ngModel]="resService.formData.ResourceId" />
-    <!--reource name-->
-    <div class="form-group">
+    <div class="center">
+      <form name="resform" #form="ngForm" autocomplete="off" (ngSubmit)="onSubmit(form)">
+        <br>
+        <!--Resource idd-->
+        <input type="hidden" name="ResourceId" [ngModel]="resService.formData.ResourceId" />
+        <!--reource name-->
+        <div class="form-group">
 
-      <label>Resource Name</label>
-      <input type="text" name="ResourceName" #ResourceName="ngModel" [ngModel]="resService.formData.ResourceName"
-        class="form-control" placeholder="Enter resource name" minlength="5" maxlength="25" required
-        pattern="^[A-Za-z\s]{1,}[\.]{0,1}[A-Za-z\s]{0,}" [ngClass]="{'is-invalid':ResourceName.touched && ResourceName.invalid}" />
-      <div class="validation-error" *ngIf="ResourceName.touched && ResourceName.invalid">
+          <label>Resource Name</label>
+          <input type="text" name="ResourceName" #ResourceName="ngModel" [ngModel]="resService.formData.ResourceName"
+            class="form-control" placeholder="Enter resource name" minlength="5" maxlength="25" required autocomplete="off"
+            pattern="^[A-Za-z\s]{1,}[\.]{0,1}[A-Za-z\s]{0,}"
+            [ngClass]="{'is-invalid':ResourceName.touched && ResourceName.invalid}" />
+          <div class="validation-error" *ngIf="ResourceName.touched && ResourceName.invalid">
 
-        <div *ngIf="ResourceName.errors.required">
-          Resource Name is required</div>
-      </div>
+            <div *ngIf="ResourceName.errors.required">
+              Resource Name is required</div>
+          </div>
+        </div>
+        <!--Description-->
+        <div class="form-group">
+
+          <label>Resource Description</label>
+          <input type="text" name="ResourceDescription" #ResourceDescription="ngModel"
+            [ngModel]="resService.formData.ResourceDescription" class="form-control" placeholder="Enter Description"
+            minlength="5" required autocomplete="off"
+            [ngClass]="{'is-invalid':ResourceDescription.touched && ResourceDescription.invalid}" />
+          <div class="validation-error" *ngIf="ResourceDescription.touched && ResourceDescription.invalid">
+
+            <div *ngIf="ResourceDescription.errors.required">
+              Description is required</div>
+          </div>
+        </div>
+        <!--=Cost-->
+        <div class="form-group">
+
+          <label>Price</label>
+          <input type="text" name="ResourceCost" id="ResourceCost" #ResourceCost="ngModel" maxlength="10"
+            [ngModel]="resService.formData.ResourceCost" class="form-control" required
+            pattern="^[1-9][0-9]+(\\.[0-9][0-9]?)?" autocomplete="off"
+            [ngClass]="{'is-invalid':ResourceCost.touched && ResourceCost.invalid}" />
+          <div class="validation-error" *ngIf="ResourceCost.touched && ResourceCost.invalid">
+
+            <div *ngIf="ResourceCost.errors.required">
+              Resource Price is required</div>
+          </div>
+        </div>
+        <!--Availability-->
+        <div class="form-group">
+          <div class="form-check">
+            <label>Availability</label>
+            <input type="checkbox" name="IsAvailable" id="IsAvailable" #IsAvailable="ngModel"
+              [ngModel]="resService.formData.IsAvailable" class="form-check-input" />
+          </div>
+
+        </div>
+
+        <!--Is Public-->
+        <div class="form-group">
+          <div class="form-check">
+            <label class="form-check-label">Is Public </label>
+            <input type="checkbox" name="IsPublic" id="IsPublic" #IsPublic="ngModel"
+              [(ngModel)]="resService.formData.IsPublic" class="form-check-input">
+          </div>
+        </div>
+
+        <!--Image upload-->
+
+
+        <!--submit button-->
+        <br>
+        <div class="form-group">
+          <button type="submit" [disabled]="!(form.valid && form.dirty)" class="btn btn-lg btn-primary form-control"
+            style="color: azure;">Submit</button>
+        </div>
+
+
+
+
+      </form>
     </div>
-    <!--Description-->
-    <div class="form-group">
-
-      <label>Resource Description</label>
-      <input type="text" name="ResourceDescription" #ResourceDescription="ngModel"
-        [ngModel]="resService.formData.ResourceDescription" class="form-control" placeholder="Enter Description"
-        minlength="5" required 
-        [ngClass]="{'is-invalid':ResourceDescription.touched && ResourceDescription.invalid}" />
-      <div class="validation-error" *ngIf="ResourceDescription.touched && ResourceDescription.invalid">
-
-        <div *ngIf="ResourceDescription.errors.required">
-          Description is required</div>
-      </div>
-    </div>
-    <!--=Cost-->
-    <div class="form-group">
-
-      <label>Price</label>
-      <input type="text" name="ResourceCost" id="ResourceCost" #ResourceCost="ngModel" maxlength="10"
-        [ngModel]="resService.formData.ResourceCost" class="form-control" required
-        pattern="^[1-9][0-9]+(\\.[0-9][0-9]?)?"
-        [ngClass]="{'is-invalid':ResourceCost.touched && ResourceCost.invalid}" />
-      <div class="validation-error" *ngIf="ResourceCost.touched && ResourceCost.invalid">
-
-        <div *ngIf="ResourceCost.errors.required">
-          Resource Price is required</div>
-      </div>
-    </div>
-    <!--Availability-->
-    <div class="form-group">
-      <div class="form-check">
-        <label>Availability</label>
-        <input type="checkbox" name="IsAvailable" id="IsAvailable" #IsAvailable="ngModel"
-          [ngModel]="resService.formData.IsAvailable" class="form-check-input" />
-      </div>
-
-    </div>
-
-    <!--Is Public-->
-    <div class="form-group">
-      <div class="form-check">
-        <label class="form-check-label">Is Public </label>
-        <input type="checkbox" name="IsPublic" id="IsPublic" #IsPublic="ngModel"
-          [(ngModel)]="resService.formData.IsPublic" class="form-check-input">
-      </div>
-    </div>
-
-    <!--Image upload-->
-
-
-    <!--submit button-->
-    <br>
-    <div class="form-group">
-      <button type="submit" [disabled]="!(form.valid && form.dirty)"
-        class="btn btn-lg btn-primary form-control" style="color: azure;">Submit</button>
-    </div>
-
-
-
-
-  </form>
-</div>
-</div>
+  </div>
 </body>

@@ -1,5 +1,12 @@
 <body>
+    <app-user-nav></app-user-nav>
+  <br>
+<br>
+
+<br>
+<br>
     <div class="container">
+        <br>
 <h3 class="text-center">Course Enquiry Form</h3>
 <br>
 <form name="resourceEnquiry" #form="ngForm" autocomplete="off" (ngSubmit)="onSubmit(form)">
@@ -24,7 +31,7 @@
 
         <label for="">Name</label>
 
-        <input name="LeadName" #LeadName="ngModel" [(ngModel)]="leadService.formData.LeadName" class="form-control"
+        <input name="LeadName" #LeadName="ngModel" [(ngModel)]="leadService.formData.LeadName" class="form-control" autocomplete="off"
             placeholder="Enter your name" minlength="5" maxlength="25" required
             [ngClass]="{ 'is-invalid': LeadName.touched && LeadName.invalid}">
         <div class="validation-error" *ngIf="LeadName.touched && LeadName.invalid">
@@ -40,7 +47,7 @@
 
         <label for="contact">Contact</label>
 
-        <input type="number" name="LeadContact" #LeadContact="ngModel" [(ngModel)]="leadService.formData.LeadContact"
+        <input type="number" name="LeadContact" #LeadContact="ngModel" [(ngModel)]="leadService.formData.LeadContact" autocomplete="off"
             class="form-control" placeholder="Enter your Contact Number" maxlength="10" required
             [ngClass]="{ 'is-invalid': LeadContact.touched && LeadContact.invalid}"
             pattern="[7-9]{1}[0-9]{9}">
@@ -59,7 +66,7 @@
         <label for="email">Email</label>
 
         <input type="email" name="LeadEmail" #LeadEmail="ngModel" [(ngModel)]="leadService.formData.LeadEmail"
-            class="form-control" placeholder="Enter your Email " required
+            class="form-control" placeholder="Enter your Email " required autocomplete="off"
             [ngClass]="{ 'is-invalid': LeadEmail.touched && LeadEmail.invalid}"
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" >
         <div class="validation-error" *ngIf="LeadEmail.touched && LeadEmail.invalid">
@@ -82,7 +89,7 @@
     <div class="form-group">
         <label for="Query">Query</label>
         <textarea name="Query" id="Query" cols="20" rows="7" #Query="ngModel"
-            [(ngModel)]="courseEnquiryService.formData.Query" class="form-control"
+            [(ngModel)]="courseEnquiryService.formData.Query" class="form-control" autocomplete="off"
             placeholder="Enter your Query for this resource " required
             [ngClass]="{ 'is-invalid': Query.touched && Query.invalid }"></textarea>
         <div class="validation-error" *ngIf="Query.touched && Query.invalid">
@@ -105,7 +112,7 @@
         <label for="LeadQualification">Qualification</label>
 
         <input type="text" name="LeadQualification" #LeadQualification="ngModel" [(ngModel)]="leadService.formData.LeadQualification"
-            class="form-control" required
+            class="form-control" required autocomplete="off"
             [ngClass]="{ 'is-invalid': LeadQualification.touched && LeadQualification.invalid}">
         <div class="validation-error" *ngIf="LeadQualification.touched && LeadQualification.invalid">
 
@@ -126,8 +133,17 @@
 
 
 
-
+<br>
+<br>
 
 </form>
 </div>
+<br>
+<br>
+
+<br>
+<br>
+
+
+<app-user-footer></app-user-footer>
 </body>

@@ -45,6 +45,12 @@ import { HomeComponent } from './home/home.component';
 import { UserNavComponent } from './user-nav/user-nav.component';
 import { MailerService } from './shared/mailer.service';
 
+import { UserFooterComponent } from './user-footer/user-footer.component';
+import { AdminnavComponent } from './adminnav/adminnav.component';
+import { ManagernavComponent } from './managernav/managernav.component';
+import { ChartsModule } from 'ng2-charts';
+import { DatePipe } from '@angular/common';
+import { ChartReportComponent } from './chart-report/chart-report.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -74,7 +80,12 @@ import { MailerService } from './shared/mailer.service';
     UsercourselistComponent,
     UserresourcelistComponent,
     HomeComponent,
-    UserNavComponent
+    UserNavComponent,
+    UserFooterComponent,
+    AdminnavComponent,
+    ManagernavComponent,
+    ChartReportComponent
+
     
   ],
   imports: [
@@ -90,7 +101,8 @@ import { MailerService } from './shared/mailer.service';
     BrowserAnimationsModule,
     NgxPaginationModule,
     Ng2SearchPipeModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ChartsModule,
   ],
   providers: [
     ResourceService,
@@ -98,6 +110,7 @@ import { MailerService } from './shared/mailer.service';
     Ng2SearchPipeModule,
     HttpClientModule,
     RouterModule,
+    DatePipe,
     CoursesService,
     AuthService,
     CoursesService,

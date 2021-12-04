@@ -13,6 +13,7 @@ export class ResourceenquiryService {
   resourceEnquiryModel:ResourceEnquiryModel[];
   enquirydetails:ResourceEnquiryModel[];
   resourceEnquiryCount:ResourceEnquiryCount[];
+  resourceEnquiryCountbydate:ResourceEnquiryCount[];
   formData: Resourceenquiry = new Resourceenquiry();
 
 
@@ -53,4 +54,18 @@ export class ResourceenquiryService {
           this.resourceEnquiryCount = response as ResourceEnquiryCount[]);
           
     }
+    bindResourceEnquiryCountbydate(filterdate:string) {
+      this.httpclient.get(environment.apiUrl + "api/resourceEnquiry/EnquiryCountByDate?date="+filterdate)
+        .toPromise().then(response =>
+          this.resourceEnquiryCountbydate = response as ResourceEnquiryCount[]);
+          
+    }
+//get enquiry count in syncronouse form
+    getResourceenquirycount()
+    {
+      return this.httpclient.get(environment.apiUrl+"api/ResourceEnquiry/EnquiryCount").toPromise().then((data)=>{
+        return data;
+      });
+    }
+
 }
