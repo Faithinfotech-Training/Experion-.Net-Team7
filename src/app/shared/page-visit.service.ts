@@ -16,4 +16,13 @@ export class PageVisitService {
     .toPromise().then(res =>
       this.pageVisits = res as PageVisit[]);
   }
+
+  getpageVisit()
+  {
+    return this.http.get(environment.apiUrl+"api/PageVisit").toPromise().then((data)=>{
+      return data;
+    });
+  }
+
+
 }

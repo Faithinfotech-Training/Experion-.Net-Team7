@@ -14,6 +14,7 @@ export class CourseEnquiryService {
   courseEnquiryModel: CourseEnquiryModel[];
   enquirydetails: CourseEnquiryModel[];
   courseEnquiryCount: CourseEnquiryCount[];
+  courseEnquiryCountbydate: CourseEnquiryCount[];
 
   formData: CourseEnquiry = new CourseEnquiry();
 
@@ -49,5 +50,23 @@ export class CourseEnquiryService {
         this.courseEnquiryCount = response as CourseEnquiryCount[]);
         
   }
+
+ //get course enquiry count  by date
+ bindCourseEnquiryCountbydate(filterdate:string) {
+  this.httpclient.get(environment.apiUrl + "api/CourseEnquiry/EnquiryCountByDate?date="+filterdate)
+    .toPromise().then(response =>
+      this.courseEnquiryCountbydate = response as CourseEnquiryCount[]);
+      
+}
+
+//get course enquiry count syncronous
+  getCourseenquirycount()
+  {
+    return this.httpclient.get(environment.apiUrl+"api/CourseEnquiry/EnquiryCount").toPromise().then((data)=>{
+      return data;
+    });
+  }
+
+ 
 
 }

@@ -29,6 +29,7 @@ import { UserresourcelistComponent } from './userresourcelist/userresourcelist.c
 import { HomeComponent } from './home/home.component';
 import { ManagernavComponent } from './managernav/managernav.component';
 import { AdminnavComponent } from './adminnav/adminnav.component';
+import { ChartReportComponent } from './chart-report/chart-report.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   {path: 'resources',  component:ResourcesComponent},
@@ -63,7 +64,8 @@ const routes: Routes = [
   {path:'userresourcelist',component:UserresourcelistComponent},
   { path: 'home', component: HomeComponent },
   { path: 'mn', component: ManagernavComponent },
-  {path:'an',component:AdminnavComponent}
+  {path:'an',component:AdminnavComponent},
+  {path:'chartReport',component:ChartReportComponent}
 
 ];
 

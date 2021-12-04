@@ -1,8 +1,6 @@
+<header>
 
-  
-    <header >
-      
-      <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           <div class="container-fluid">
             <a class="navbar-brand text-success " href="manager">GEO INFOTECH</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,43 +38,88 @@
             </div>
           </div>
         </nav> -->
-         <app-managernav></app-managernav> 
-      </header>
-  
-<br>
-<br>
-<div class="container">
-    <div class="header">
-        <h5>Course Enquiry Summary</h5>
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search here..." [(ngModel)]="filter">
-        </div>
-        <br>
-    </div>
+  <app-managernav></app-managernav>
+</header>
 
+<br>
+<br>
+<br>
+<br><br>
+<div class="container">
+  <div class="header">
+    <h4 class="text-center">Resource Enquiry Summary</h4>
+
+  </div>
+  <br>
+  <br>
+  <form class="row g-3 " #form="ngForm" (ngSubmit)="onpress(form)" autocomplete="off">
+    <div class="form-group col-md-10">
+      <input type="date" id="filterdate" name="filterdate" #filterdate="ngModel" [(ngModel)]="this.date"
+        class="form-control">
+       
+    </div>
+    <div class="form-group col-md-2">
+      <input type="submit" class="btn btn-info" value="Filter" >
+    </div>
+  </form>
+
+
+<br>
+<br>
+
+
+  <ng-container *ngIf="issubmit">
     <table style="border:0;" class="table table-striped">
-        <thead>
-            <tr>
-                <th>Resource Id</th>
-                <th>Resource Name</th>
-                <th>Enquiry Count</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr
-                *ngFor="let r of resourceEnquiryService.resourceEnquiryCount | filter:filter | paginate: {itemsPerPage:5, currentPage:page}">
-                <td>{{r.ResourceId}}</td>
-                <td>{{r.ResourceName}}</td>
-                <td>{{ r.ResourceCount}}</td>
-                <td>
-                    <button class="btn btn-info btn-sm" (click)="viewDetails(r.ResourceId)">View Details</button>
-                </td>
-            </tr>
-        </tbody>
+      <thead>
+        <tr>
+          <th>Resource Id</th>
+          <th>Resource Name</th>
+          <th>Enquiry Count</th>
+          <th>Enquiry Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="let r of resourceEnquiryService.resourceEnquiryCountbydate | filter:filter | paginate: {itemsPerPage:5, currentPage:page}">
+          <td>{{r.ResourceId}}</td>
+          <td>{{r.ResourceName}}</td>
+          <td>{{ r.ResourceCount}}</td>
+          <td>{{r.EnquiryDate|date:'yyyy-MM-dd'}}</td>
+          <td>
+            <button class="btn btn-info btn-sm" (click)="viewDetails(r.ResourceId)">View Details</button>
+          </td>
+        </tr>
+      </tbody>
     </table>
 
-    <div class="footer">
-        <!--pagination-->
-        <pagination-controls (pageChange)="page=($event)"></pagination-controls>
-    </div>
+  </ng-container>
+
+  <ng-container *ngIf="!issubmit">
+    <table style="border:0;" class="table table-striped">
+      <thead>
+        <tr>
+          <th>Resource Id</th>
+          <th>Resource Name</th>
+          <th>Enquiry Count</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="let r of resourceEnquiryService.resourceEnquiryCount | filter:filter | paginate: {itemsPerPage:5, currentPage:page}">
+          <td>{{r.ResourceId}}</td>
+          <td>{{r.ResourceName}}</td>
+          <td>{{ r.ResourceCount}}</td>
+          <td>
+            <button class="btn btn-info btn-sm" (click)="viewDetails(r.ResourceId)">View Details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </ng-container>
+
+  <div class="footer">
+    <!--pagination-->
+    <pagination-controls (pageChange)="page=($event)"></pagination-controls>
+  </div>
 </div>
