@@ -49,7 +49,7 @@ namespace TrainingAcademyManagmentSystem.Repository
         {
             return await(from re in db.ResourceEnquiry
                          join r in db.Resource on re.ResourceId equals r.ResourceId
-                         where re.EnquiryDate>date
+                         where re.EnquiryDate>=date
                          group re by new { re.ResourceId, r.ResourceName,re.EnquiryDate } into grp
 
                          select new ResourceCountModel

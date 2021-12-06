@@ -48,7 +48,7 @@ namespace TrainingAcademyManagmentSystem.Repository
         {
             return await(from ce in db.CourseEnquiry
                          join c in db.Courses on ce.CourseId equals c.CourseId
-                         where ce.EnquiryDate>date
+                         where ce.EnquiryDate>=date
                          group ce by new { ce.CourseId, c.CourseName,ce.EnquiryDate } into grp
 
 
