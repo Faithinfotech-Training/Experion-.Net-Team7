@@ -54,6 +54,7 @@ namespace TrainingAcademyManagmentSystem.Repository
                                   CourseDescription = r.CourseDescription,
                                   IsAvailable = r.IsAvailable,
                                   IsPublic = r.IsPublic,
+                                  CourseDuration = r.CourseDuration
                                  
 
                               }
