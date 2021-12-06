@@ -51,6 +51,7 @@ import { ManagernavComponent } from './managernav/managernav.component';
 import { ChartsModule } from 'ng2-charts';
 import { DatePipe } from '@angular/common';
 import { ChartReportComponent } from './chart-report/chart-report.component';
+import { UserManagementComponent } from './user-management/user-management.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -84,7 +85,8 @@ import { ChartReportComponent } from './chart-report/chart-report.component';
     UserFooterComponent,
     AdminnavComponent,
     ManagernavComponent,
-    ChartReportComponent
+    ChartReportComponent,
+    UserManagementComponent
 
     
   ],
