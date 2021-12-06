@@ -60,6 +60,9 @@ namespace TrainingAcademyManagmentSystem.Repository
             return null;
         }
 
+
+
+
         //delete user by passing id
         public async Task<Users> DeleteUser(int id)
         {
@@ -78,9 +81,17 @@ namespace TrainingAcademyManagmentSystem.Repository
 
         }
 
+        //add user 
+        public async Task<int> AddUser(Users user)
+        {
+            if(_db!=null)
+            {
+                await _db.Users.AddAsync(user);
+                await _db.SaveChangesAsync();
 
-
-
-
+                return user.UserId;
+            }
+            return 0;
+        }
     }
 }
