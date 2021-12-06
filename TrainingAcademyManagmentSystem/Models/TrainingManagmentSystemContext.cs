@@ -81,7 +81,6 @@ namespace TrainingAcademyManagmentSystem.Models
 
                 entity.Property(e => e.Query)
                     .HasColumnName("query")
-                    .HasMaxLength(30)
                     .IsUnicode(false);
 
                 entity.HasOne(d => d.Course)
@@ -145,6 +144,11 @@ namespace TrainingAcademyManagmentSystem.Models
 
                 entity.Property(e => e.CourseDescription)
                     .HasColumnName("courseDescription")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.CourseDuration)
+                    .HasColumnName("courseDuration")
+                    .HasMaxLength(20)
                     .IsUnicode(false);
 
                 entity.Property(e => e.CourseName)
@@ -255,7 +259,6 @@ namespace TrainingAcademyManagmentSystem.Models
 
                 entity.Property(e => e.Query)
                     .HasColumnName("query")
-                    .HasMaxLength(30)
                     .IsUnicode(false);
 
                 entity.Property(e => e.ResourceId).HasColumnName("resourceId");
