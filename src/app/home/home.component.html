@@ -114,6 +114,7 @@
                 <p class="price"> {{course.CoursePrice}} </p>
               </div>
               <p> {{course.CourseDescription}} </p>
+              <p>  {{course.CourseDuration}} </p>
               <h6><a href="/courseenquiry/{{course.CourseId}}"> Enquire </a></h6>
             </div>
           </div>
@@ -134,7 +135,7 @@
       <div class="row" data-aos="zoom-in" data-aos-delay="100">
 
         <div *ngFor="let res of resourceService.availableResource| slice:0:3" class="col-lg-4 col-md-6 d-flex align-items-stretch">
-          <div class="course-item">
+          <div class="course-item shadow p-3 mb-5 bg-white rounded">
             <img src="https://www.ucd.ie/itservices/t4media/virtual_learning.png" class="img-fluid" alt="...">
             <div class="course-content">
               <br>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { PageVisitService } from '../shared/page-visit.service';
 import { Resource } from '../shared/resource';
 import { ResourceService } from '../shared/resource.service';
 
@@ -10,11 +11,12 @@ import { ResourceService } from '../shared/resource.service';
 })
 export class UserresourcelistComponent implements OnInit {
 
-  constructor( public service:ResourceService,private route:Router) { }
+  constructor( public service:ResourceService,private route:Router,public pageVisitService:PageVisitService) { }
 resourceview:Resource[];
   ngOnInit(): void {
 
     this.service.bindAvailableResource();
+    this.pageVisitService.updatepageVisit("resourcelist");
    
   
 }

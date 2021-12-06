@@ -5,4 +5,5 @@ export class Courses {
     IsAvailable: boolean;
     CoursePrice: number=0;
     CourseDescription: string='';
+    CourseDuration: string='';
 }

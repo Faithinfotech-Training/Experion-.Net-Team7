@@ -19,12 +19,12 @@ import { CoursesService } from './shared/courses.service';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { LoginComponent } from './login/login.component';
 import { AuthService } from './shared/auth.service';
-import{LeadComponent}from'./lead/lead.component';
-import{ResourceEnquiryComponent}from'./resource-enquiry/resource-enquiry.component';
+import { LeadComponent } from './lead/lead.component';
+import { ResourceEnquiryComponent } from './resource-enquiry/resource-enquiry.component';
 import { AdminComponent } from './admin/admin.component';
 import { ManagerComponent } from './manager/manager.component';
 import { AuthGuard } from './shared/auth.guard';
-import{TokenInterceptor}from'./shared/token.interceptor';
+import { TokenInterceptor } from './shared/token.interceptor';
 import { CourseEnquiryComponent } from './course-enquiry/course-enquiry.component';
 import { ResourcePipelineComponent } from './resource-pipeline/resource-pipeline.component';
 import { EditResourcePipelineComponent } from './edit-resource-pipeline/edit-resource-pipeline.component';
@@ -34,8 +34,8 @@ import { CourseEnquirySummaryComponent } from './course-enquiry-summary/course-e
 import { CourseEnquiryReportComponent } from './course-enquiry-report/course-enquiry-report.component';
 import { CoursePipelineComponent } from './course-pipeline/course-pipeline.component';
 import { EditCoursePipelineComponent } from './edit-course-pipeline/edit-course-pipeline.component';
-import { CoursePipelineService} from './shared/course-pipeline.service';
-import{PageVisitService}from'./shared/page-visit.service';
+import { CoursePipelineService } from './shared/course-pipeline.service';
+import { PageVisitService } from './shared/page-visit.service';
 import { PagevisitComponent } from './pagevisit/pagevisit.component';
 import { CourseEnquiryCountComponent } from './course-enquiry-count/course-enquiry-count.component';
 import { ResourceEnquiryCountComponent } from './resource-enquiry-count/resource-enquiry-count.component';
@@ -52,6 +52,8 @@ import { ChartsModule } from 'ng2-charts';
 import { DatePipe } from '@angular/common';
 import { ChartReportComponent } from './chart-report/chart-report.component';
 import { UserManagementComponent } from './user-management/user-management.component';
+import { BackButtonDisableModule } from 'angular-disable-browser-back-button';
+import { AdminfooterComponent } from './adminfooter/adminfooter.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -86,9 +88,10 @@ import { UserManagementComponent } from './user-management/user-management.compo
     AdminnavComponent,
     ManagernavComponent,
     ChartReportComponent,
-    UserManagementComponent
+    UserManagementComponent,
+    AdminfooterComponent
 
-    
+
   ],
   imports: [
     FormsModule,
@@ -105,6 +108,9 @@ import { UserManagementComponent } from './user-management/user-management.compo
     Ng2SearchPipeModule,
     ReactiveFormsModule,
     ChartsModule,
+    BackButtonDisableModule.forRoot({
+      preserveScrollPosition: true
+    })
   ],
   providers: [
     ResourceService,
@@ -119,12 +125,12 @@ import { UserManagementComponent } from './user-management/user-management.compo
     AuthGuard,
     PageVisitService,
     {
-      provide:HTTP_INTERCEPTORS,
-      useClass:TokenInterceptor,
-      multi:true
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
     },
     CoursePipelineService,
-    MailerService 
+    MailerService
   ],
   bootstrap: [AppComponent]
 })
