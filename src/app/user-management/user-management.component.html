@@ -1,5 +1,5 @@
 <header *ngIf=this.IsAdmin()>
-    <!--
+  <!--
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand text-success " href="/admin">GEO INFOTECH</a>
@@ -38,62 +38,66 @@
         </div>
       </div>
     </nav>-->
-      <app-adminnav></app-adminnav>
-  </header>
-  <br>
-  <br>
+  <app-adminnav></app-adminnav>
+</header>
+<br>
+<br>
 
 <body>
-<div class="container own"> 
-    <h3>Enter details of the user  to be added</h3>
+  <div class="container own">
+    <h3>Enter details of the user to be added</h3>
     <br>
     <form class="row g-3" #form="ngForm" (ngSubmit)="insertUser(form)" autocomplete="off">
-        <div class="col-md-6">
-          <label for="UserName" class="form-label"> Username </label>
-          <input type="text" class="form-control" id="inputEmail4"  name="UserName" #UserName="ngModel"  autocomplete="off"
-          [(ngModel)]="userService.formData.UserName" required [ngClass]="{ 'is-invalid': UserName.touched && UserName.invalid}">
-          <div class="validation-error" *ngIf="UserName.touched && UserName.invalid">
-            <div *ngIf="UserName.errors.required">Username is required</div>
-          </div>
+      <div>
+        <label for="UserName" class="form-label"> Username </label>
+        <input type="text" class="form-control" id="inputEmail4" name="UserName" #UserName="ngModel" autocomplete="off"
+          [(ngModel)]="userService.formData.UserName" required
+          [ngClass]="{ 'is-invalid': UserName.touched && UserName.invalid}">
+        <div class="validation-error" *ngIf="UserName.touched && UserName.invalid">
+          <div *ngIf="UserName.errors.required">Username is required</div>
+        </div>
+      </div>
+
+      <div >
+        <label for="Password" class="form-label"> Password </label>
+        <input type="password" class="form-control" id="inputEmail4" name="Password" #Password="ngModel"
+          autocomplete="off" [(ngModel)]="userService.formData.Password" required
+          [ngClass]="{ 'is-invalid': Password.touched && Password.invalid}">
+        <div class="validation-error" *ngIf="Password.touched && Password.invalid">
+          <div *ngIf="Password.errors.required">Password is required</div>
+        </div>
+      </div>
+
+      <div>
+        <label for="RoleId" class="form-label">UserRole</label>
+        <select class="form-control" name="RoleId" id="RoleId" #RoleId="ngModel"
+          [(ngModel)]="userService.formData.RoleId" required
+          [ngClass]="{ 'is-invalid': Password.touched && Password.invalid}">
+          <option value="" disabled>Choose user role</option>
+          <option value="1">Admin</option>
+          <option value="2">Manager</option>
+
+        </select>
+        <div class="validation-error" *ngIf="RoleId.touched && RoleId.invalid">
+          <div *ngIf="RoleId.errors.required">User Role is required</div>
         </div>
 
-        <div class="col-md-6">
-            <label for="Password" class="form-label"> Password </label>
-            <input type="password" class="form-control" id="inputEmail4"  name="Password" #Password="ngModel"  autocomplete="off"
-            [(ngModel)]="userService.formData.Password" required [ngClass]="{ 'is-invalid': Password.touched && Password.invalid}">
-            <div class="validation-error" *ngIf="Password.touched && Password.invalid">
-              <div *ngIf="Password.errors.required">Password is required</div>
-            </div>
-          </div>
 
-          <div class="col-md-4">
-              <label for="RoleId" class="form-label">UserRole</label>
-              <select class="form-control" name="RoleId" id="RoleId" #RoleId="ngModel" [(ngModel)]="userService.formData.RoleId" required [ngClass]="{ 'is-invalid': Password.touched && Password.invalid}">
-                <option value="" disabled>Choose user role</option>
-                <option value="1">Admin</option>
-                <option value="2">Manager</option>
-
-              </select>
-              <div class="validation-error" *ngIf="RoleId.touched && RoleId.invalid">
-                <div *ngIf="RoleId.errors.required">User Role is required</div>
-              </div>
-
-
-          </div>
-        
+      </div>
 
 
 
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="IsActive" id="flexCheckDefault" name="IsActive"
-                #IsActive="ngModel" [(ngModel)]="userService.formData.IsActive">
-            <label class="form-check-label" for="IsActive">
-                Active Status
-            </label>
-        </div>
-        <div class="col-12">
-          <button type="submit" class="btn btn-primary"> Add user </button>
-        </div>
-      </form>
-</div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="IsActive" id="flexCheckDefault" name="IsActive"
+          #IsActive="ngModel" [(ngModel)]="userService.formData.IsActive">
+        <label class="form-check-label" for="IsActive">
+          Active Status
+        </label>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary"> Add user </button>
+      </div>
+    </form>
+  </div>
 </body>
