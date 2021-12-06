@@ -23,6 +23,12 @@ export class PageVisitService {
       return data;
     });
   }
+  updatepageVisit(pageName:string)
+  {
+    return this.http.put(environment.apiUrl+"api/PageVisit?pageName="+pageName,{}).toPromise().then((data)=>{
+      return data;
+    });
+  }
 
 
 }
