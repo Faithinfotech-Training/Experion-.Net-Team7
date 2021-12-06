@@ -206,6 +206,33 @@ namespace TrainingAcademyManagmentSystem.Controllers
         }
         #endregion
 
+        #region Add user by admin
+        [HttpPost]
+        // [Authorize]
+        [Route("AddUser")]
+        public async Task<IActionResult> AddUser([FromBody] Users user)
+        {
+            //Check the validation of body
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    var UserId=await UserRepository.AddUser(user);
+                    if(UserId>0)
+                    {
+                        return Ok(UserId);
+                    }
+                    return NotFound();
+                }
+                catch (Exception)
+                {
+                    return BadRequest();
+                }
+            }
+            return NotFound ();
+        }
+        #endregion
+
 
 
 

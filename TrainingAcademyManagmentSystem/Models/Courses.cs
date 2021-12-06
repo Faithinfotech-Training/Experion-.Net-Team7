@@ -18,6 +18,7 @@ namespace TrainingAcademyManagmentSystem.Models
         public bool IsAvailable { get; set; }
         public decimal CoursePrice { get; set; }
         public string CourseDescription { get; set; }
+        public string CourseDuration { get; set; }
 
         public virtual ICollection<Batch> Batch { get; set; }
         public virtual ICollection<CourseEnquiry> CourseEnquiry { get; set; }

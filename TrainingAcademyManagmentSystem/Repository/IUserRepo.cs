@@ -26,6 +26,10 @@ namespace TrainingAcademyManagmentSystem.Repository
         //--- update user ---//
         Task<Users> UpdateUser(Users user);
 
+        //add user
+
+        public Task<int> AddUser(Users user);
+
 
 
     }
