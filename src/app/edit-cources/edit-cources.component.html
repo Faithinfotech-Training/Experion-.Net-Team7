@@ -114,6 +114,12 @@
                   <div *ngIf="CoursePrice.errors"> Price is required in number format </div>
               </div>
           </div>
+
+          <div class="col-12">
+            <label for="CourseDuration" class="form-label"> Duration </label>
+            <input type="text" class="form-control" id="CourseDuration" name="CourseDescription"
+                #CourseDuration="ngModel" [(ngModel)]="service.formData.CourseDuration">
+        </div>
   
           <div class="col-12">
               <label for="Description" class="form-label"> Description </label>

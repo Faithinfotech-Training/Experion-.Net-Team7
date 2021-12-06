@@ -1,5 +1,5 @@
 <header *ngIf=this.IsAdmin()>
-    
+
   <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand text-success " href="/admin">GEO INFOTECH</a>
@@ -36,14 +36,14 @@
         </div>
       </div>
     </nav> -->
-      
-    <app-adminnav></app-adminnav>
-  </header>
+
+  <app-adminnav></app-adminnav>
+</header>
 
 
-  <header *ngIf=this.IsManager()>
-    
-    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<header *ngIf=this.IsManager()>
+
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand text-success " href="manager">GEO INFOTECH</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -81,45 +81,54 @@
           </div>
         </div>
       </nav> -->
-       <app-managernav></app-managernav> 
-    </header>
+  <app-managernav></app-managernav>
+</header>
 
-  <br>
-  <br>
-  <br>
-  <br>
+<br>
+<br>
+<br>
+<br>
 <div class="container ">
-  <a *ngIf=this.IsAdmin() [routerLink]="['/addcourse']" class="btn btn-success" style="float: right;margin-bottom:10px;" >Add Course</a>
-    <table class="table table-bordered table-striped">
-        <thead>
-          <tr>
-            <th scope="col">Course id</th>
-            <th scope="col"> Course Name </th>
-            <th scope="col"> Price </th>
-            <th scope="col"> Description </th>
-            <th scope="col"> Public </th>
-            <th scope="col"> Availability </th>
-            <th scope="col" *ngIf=this.IsAdmin()> Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let course of service.courses | filter: filter | paginate: {itemsPerPage: 5, currentPage: page}">
-            <th scope="row"> {{course.CourseId}} </th>
-            <td> {{course.CourseName}}  </td>
-            <td> {{course.CoursePrice}}  </td>
-            <td> {{course.CourseDescription}}  </td>
-            <td> {{course.IsPublic}}  </td>
-            <td> {{course.IsAvailable}}  </td>
-            <td *ngIf=this.IsAdmin()>
-                <button class="btn btn-sm btn-outline-danger " (click)="deleteCourse(course.CourseId)"> Delete </button>&nbsp;
-                <button class="btn btn-info btn-sm" style="margin-left:10px ;" (click)="updateCourse(course.CourseId)"> Edit</button>
-              </td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="footer">
-        <!--pagination-->
-        <pagination-controls (pageChange)="page=($event)"></pagination-controls>
-    </div>
-    
+  <a *ngIf=this.IsAdmin() [routerLink]="['/addcourse']" class="btn btn-success"
+    style="float: right;margin-bottom:10px;">Add Course</a>
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Search here..." [(ngModel)]="filter">
+  </div>
+  <br>
+  <br>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Course id</th>
+        <th scope="col"> Course Name </th>
+        <th scope="col"> Price </th>
+        <th scope="col"> Description </th>
+        <th scope="col"> Public </th>
+        <th scope="col"> Availability </th>
+        <th scope="col"> Duration </th>
+        <th scope="col" *ngIf=this.IsAdmin()> Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let course of service.courses | filter: filter | paginate: {itemsPerPage: 5, currentPage: page}">
+        <th scope="row"> {{course.CourseId}} </th>
+        <td> {{course.CourseName}} </td>
+        <td> {{course.CoursePrice}} </td>
+        <td> {{course.CourseDescription}} </td>
+        <td> {{course.IsPublic}} </td>
+        <td> {{course.IsAvailable}} </td>
+        <td> {{course.CourseDuration}} </td>
+        <td *ngIf=this.IsAdmin()>
+          <button class="btn btn-sm btn-outline-danger " (click)="deleteCourse(course.CourseId)"> Delete </button>&nbsp;
+          <button class="btn btn-info btn-sm" style="margin-left:10px ;" (click)="updateCourse(course.CourseId)">
+            Edit</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="footer">
+    <!--pagination-->
+    <pagination-controls (pageChange)="page=($event)"></pagination-controls>
+  </div>
+
 </div>
