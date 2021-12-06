@@ -50,6 +50,7 @@ export class CourseEnquiryComponent implements OnInit {
        
        this.toxter.success("Your query is registered successfully",'Success');
        form.reset();
+       this.router.navigateByUrl("/home");
        
       },
       (error)=>

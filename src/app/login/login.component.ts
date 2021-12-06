@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import {Users} from'../shared/users';
 import{AuthService} from '../shared/auth.service';
 import{JwtResponce}from '../shared/jwt-responce'
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -16,11 +17,12 @@ export class LoginComponent implements OnInit {
   
   isSubmitted = false;
   loginUser: Users = new Users;
-  error = '';
+  errormessage = '';
 
   jwtResponse:any=new JwtResponce();
   constructor(private formbuilder: FormBuilder,
-    private router: Router,public authService:AuthService
+    private router: Router,public authService:AuthService,
+    public toxter:ToastrService
   ) { }
 
   ngOnInit(): void {
@@ -109,13 +111,14 @@ export class LoginComponent implements OnInit {
               }
               else{
 
-                this.error="Sorry .. invalid authorization"
+                this.errormessage="Sorry .. invalid authorization"
               }
             },
             
         error=>
         {
-          this.error="invalid"
+          this.errormessage="invalid credentials";
+          this.toxter.error("invalid credentials","Invalid")
         }
         )
     }

@@ -51,6 +51,8 @@ import { ManagernavComponent } from './managernav/managernav.component';
 import { ChartsModule } from 'ng2-charts';
 import { DatePipe } from '@angular/common';
 import { ChartReportComponent } from './chart-report/chart-report.component';
+import { BackButtonDisableModule } from 'angular-disable-browser-back-button';
+import { AdminfooterComponent } from './adminfooter/adminfooter.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -84,7 +86,8 @@ import { ChartReportComponent } from './chart-report/chart-report.component';
     UserFooterComponent,
     AdminnavComponent,
     ManagernavComponent,
-    ChartReportComponent
+    ChartReportComponent,
+    AdminfooterComponent
 
     
   ],
@@ -103,6 +106,9 @@ import { ChartReportComponent } from './chart-report/chart-report.component';
     Ng2SearchPipeModule,
     ReactiveFormsModule,
     ChartsModule,
+    BackButtonDisableModule.forRoot({
+      preserveScrollPosition: true
+    })
   ],
   providers: [
     ResourceService,
