@@ -9,7 +9,8 @@ import { ResourcepipelineService } from '../shared/resourcepipeline.service';
   styleUrls: ['./resource-pipeline.component.css']
 })
 export class ResourcePipelineComponent implements OnInit {
-
+  page: number = 1;
+  filter: string;
   constructor(public service:ResourcepipelineService,private authService:AuthService,private route:Router) { }
 
   ngOnInit(): void {

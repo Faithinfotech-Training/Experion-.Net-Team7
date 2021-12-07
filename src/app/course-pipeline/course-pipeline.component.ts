@@ -9,7 +9,8 @@ import { CoursePipelineService } from '../shared/course-pipeline.service';
   styleUrls: ['./course-pipeline.component.css']
 })
 export class CoursePipelineComponent implements OnInit {
-
+  page: number = 1;
+  filter: string;
   constructor(public authService:AuthService,private route:Router,public service: CoursePipelineService) { }
 
   ngOnInit(): void {

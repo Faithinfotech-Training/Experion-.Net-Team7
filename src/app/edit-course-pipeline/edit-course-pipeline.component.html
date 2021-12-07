@@ -63,8 +63,8 @@
             </div>
         </div> -->
         <br>
-        <div class="wishlist-border pt-2"> <span class="wishlist"> {{service.leadData.LeadContact}} </span> </div>
-        <div class="wishlist-border pt-2"> <span class="wishlist"> {{service.leadData.LeadQualification}} </span> </div>
+        <div class="wishlist-border pt-2">Contact : <span class="wishlist"> {{service.leadData.LeadContact}} </span> </div>
+        <div class="wishlist-border pt-2">Qualification :<span class="wishlist"> {{service.leadData.LeadQualification}} </span> </div>
         <form #form="ngForm" (ngSubmit)="updateLead(form)">
             <input type="hidden" name="LeadId" #LeadId="ngModel" [(ngModel)]="service.leadData.LeadId">
             <input type="hidden" name="LeadName" #LeadName="ngModel" [(ngModel)]="service.leadData.LeadName">
@@ -72,6 +72,7 @@
             <input type="hidden" name="LeadEmail" #LeadEmail="ngModel" [(ngModel)]="service.leadData.LeadEmail">
             <input type="hidden" name="LeadQualification" #LeadQualification="ngModel" [(ngModel)]="service.leadData.LeadQualification">
             <div class="fashion-studio-border pt-2">
+              <label>Status :</label>
                 <select class="form-select" aria-label="Default select example" name="LeadStatus" #LeadStatus="ngModel"
                     [(ngModel)]="service.formData.LeadStatus">
                     <option selected> Select status</option>
@@ -86,5 +87,7 @@
             </div>
 
         </form>
+        <br>
+        <br>
     </div>
 </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { AuthService } from '../shared/auth.service';
 import { CoursesService } from '../shared/courses.service';
 
@@ -13,7 +14,7 @@ export class CoursesComponent implements OnInit {
   page:number=1;
   filter: string;
 
-  constructor( public service:CoursesService,public authService:AuthService,private route:Router, private router: Router ) { }
+  constructor( public service:CoursesService,public authService:AuthService,private route:Router, private router: Router ,public toxter:ToastrService) { }
 
   ngOnInit(): void {
     this.service.getCourses();
@@ -25,6 +26,8 @@ export class CoursesComponent implements OnInit {
      this.service.deleteCourse(id).subscribe(
        (res) => {
          console.log(res);
+         this.toxter.info("is available set to false","Success")
+         window.location.reload();
        }
      );
     }

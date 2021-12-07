@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { AuthService } from '../shared/auth.service';
 import { CoursePipelineService } from '../shared/course-pipeline.service';
 import { MailerService } from '../shared/mailer.service';
@@ -15,7 +16,7 @@ export class EditCoursePipelineComponent implements OnInit {
   leadId: number;
 
   constructor( public service: CoursePipelineService, private authService:AuthService,private router: Router,
-    private route: ActivatedRoute, public mailerService: MailerService) { }
+    private route: ActivatedRoute, public mailerService: MailerService,public toxter:ToastrService) { }
 
   ngOnInit(): void {
     this.leadId = this.route.snapshot.params['id'];
@@ -40,6 +41,11 @@ export class EditCoursePipelineComponent implements OnInit {
     this.service.updateLead(form.value).subscribe(
       (res) => {
         console.log(res);
+        this.toxter.info("updated successfully","Success")
+
+      },(error)=>
+      {
+        this.toxter.error("Something went wrong","Erorr")
       }
     );
     this.router.navigateByUrl('coursepipeline');

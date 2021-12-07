@@ -120,8 +120,11 @@
 
           <div class="col-12">
             <label for="CourseDuration" class="form-label"> Duration </label>
-            <input type="text" class="form-control" id="CourseDuration" name="CourseDescription"
-                #CourseDuration="ngModel" [(ngModel)]="service.formData.CourseDuration">
+            <input type="text" class="form-control" id="CourseDuration" name="CourseDuration"
+                #CourseDuration="ngModel" [(ngModel)]="service.formData.CourseDuration" required>
+                <div class="validation-error" *ngIf="CourseDuration.touched && CourseDuration.invalid">
+                  <div *ngIf="CourseDuration.errors.required  && CourseDuration.errors"> Duration required </div>
+                </div>
         </div>
   
           <div class="col-12">
@@ -149,7 +152,11 @@
           <div class="col-12">
               <button type="submit" class="btn btn-primary"> Submit </button>
           </div>
-      </form>
-  </div>
-
+          <br>
+          <br>
+        </form>
+        <br>
+        <br>
+        <br>
+        </div>
   </body>
